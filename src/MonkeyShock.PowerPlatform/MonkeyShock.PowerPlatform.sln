@@ -18,8 +18,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pipelines", "Pipelines", "{3D6C08BA-2D65-42C4-99AB-F3D1A2F4E241}"
 	ProjectSection(SolutionItems) = preProject
 		Infrastructure\Pipelines\dataverse-build-test-pipeline.yml = Infrastructure\Pipelines\dataverse-build-test-pipeline.yml
-		Infrastructure\Pipelines\dataverse-solution-export-pipeline-local-branch.yml = Infrastructure\Pipelines\dataverse-solution-export-pipeline-local-branch.yml
-		Infrastructure\Pipelines\dataverse-solution-export-pipeline.yml = Infrastructure\Pipelines\dataverse-solution-export-pipeline.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{1F8E7CFD-B6B0-475D-9468-3D37B312A304}"

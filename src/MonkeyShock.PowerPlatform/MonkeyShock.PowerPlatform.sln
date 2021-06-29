@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dataverse", "Dataverse", "{2CFAE37A-56B5-42AA-8471-48AB8F5DB60E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6B57019E-0D0E-41CC-A5E6-F20045F06DE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{65BFAEDF-6934-42F7-8393-3330966681B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyShock.PowerPlatform.Dataverse.Plugins", "Code\Dataverse\MonkeyShock.PowerPlatform.Dataverse.Plugins\MonkeyShock.PowerPlatform.Dataverse.Plugins.csproj", "{12F8306A-95FC-4704-84A1-FB5E025A1491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyShock.PowerPlatform.Dataverse.Plugins.UnitTests", "Tests\Dataverse\MonkeyShock.PowerPlatform.Dataverse.Plugins.UnitTests\MonkeyShock.PowerPlatform.Dataverse.Plugins.UnitTests.csproj", "{330F06F7-AC5D-458F-8C94-2E704BF97B8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3EFBCF8B-9843-40FB-9CAD-796DA8298042}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pipelines", "Pipelines", "{3D6C08BA-2D65-42C4-99AB-F3D1A2F4E241}"
+	ProjectSection(SolutionItems) = preProject
+		Infrastructure\Pipelines\dataverse-build-test-pipeline.yml = Infrastructure\Pipelines\dataverse-build-test-pipeline.yml
+		Infrastructure\Pipelines\dataverse-solution-export-pipeline-local-branch.yml = Infrastructure\Pipelines\dataverse-solution-export-pipeline-local-branch.yml
+		Infrastructure\Pipelines\dataverse-solution-export-pipeline.yml = Infrastructure\Pipelines\dataverse-solution-export-pipeline.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{1F8E7CFD-B6B0-475D-9468-3D37B312A304}"
+	ProjectSection(SolutionItems) = preProject
+		Infrastructure\Resources\solution-map.xml = Infrastructure\Resources\solution-map.xml
+	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MonkeyShock.PowerPlatform.Dataverse.Context", "Code\Dataverse\MonkeyShock.PowerPlatform.Dataverse.Context\MonkeyShock.PowerPlatform.Dataverse.Context.shproj", "{6401F228-23AC-4A10-B927-A701CF9C7650}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{9FD28CC2-9539-40D6-86F8-2F1FC250AE2D}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Code\Dataverse\MonkeyShock.PowerPlatform.Dataverse.Context\MonkeyShock.PowerPlatform.Dataverse.Context.projitems*{12f8306a-95fc-4704-84a1-fb5e025a1491}*SharedItemsImports = 4
+		Code\Dataverse\MonkeyShock.PowerPlatform.Dataverse.Context\MonkeyShock.PowerPlatform.Dataverse.Context.projitems*{6401f228-23ac-4a10-b927-a701cf9c7650}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12F8306A-95FC-4704-84A1-FB5E025A1491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F8306A-95FC-4704-84A1-FB5E025A1491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F8306A-95FC-4704-84A1-FB5E025A1491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F8306A-95FC-4704-84A1-FB5E025A1491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{330F06F7-AC5D-458F-8C94-2E704BF97B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{330F06F7-AC5D-458F-8C94-2E704BF97B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{330F06F7-AC5D-458F-8C94-2E704BF97B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{330F06F7-AC5D-458F-8C94-2E704BF97B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2CFAE37A-56B5-42AA-8471-48AB8F5DB60E} = {65BFAEDF-6934-42F7-8393-3330966681B4}
+		{12F8306A-95FC-4704-84A1-FB5E025A1491} = {2CFAE37A-56B5-42AA-8471-48AB8F5DB60E}
+		{330F06F7-AC5D-458F-8C94-2E704BF97B8F} = {6B57019E-0D0E-41CC-A5E6-F20045F06DE3}
+		{3D6C08BA-2D65-42C4-99AB-F3D1A2F4E241} = {3EFBCF8B-9843-40FB-9CAD-796DA8298042}
+		{1F8E7CFD-B6B0-475D-9468-3D37B312A304} = {3EFBCF8B-9843-40FB-9CAD-796DA8298042}
+		{6401F228-23AC-4A10-B927-A701CF9C7650} = {2CFAE37A-56B5-42AA-8471-48AB8F5DB60E}
+		{9FD28CC2-9539-40D6-86F8-2F1FC250AE2D} = {65BFAEDF-6934-42F7-8393-3330966681B4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4440BA52-A533-4D9D-9569-B26F19B55DD3}
+	EndGlobalSection
+EndGlobal

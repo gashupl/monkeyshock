@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<Mapping>
+    <FileToFile map="PluginAssemblies/MonkeyShockPowerPlatformDataversePlugins-7CA15614-DBC4-406C-811F-FAAC20B2E75D/MonkeyShockPowerPlatformDataversePlugins.dll" to="..\..\..\src\MonkeyShock.PowerPlatform\Code\Dataverse\MonkeyShock.PowerPlatform.Dataverse.Plugins\bin\Release\MonkeyShock.PowerPlatform.Dataverse.Plugins.dll" />
+</Mapping>

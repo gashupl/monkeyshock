@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_pg_pcftest" />
+  <EntityRelationship Name="lk_pg_demo_createdby" />
+  <EntityRelationship Name="lk_pg_demo_modifiedby" />
+  <EntityRelationship Name="lk_pg_pcftest_createdby" />
+  <EntityRelationship Name="lk_pg_pcftest_modifiedby" />
+  <EntityRelationship Name="organization_pg_demo" />
+  <EntityRelationship Name="owner_pg_pcftest" />
+  <EntityRelationship Name="team_pg_pcftest" />
+  <EntityRelationship Name="user_pg_pcftest" />
+</EntityRelationships>

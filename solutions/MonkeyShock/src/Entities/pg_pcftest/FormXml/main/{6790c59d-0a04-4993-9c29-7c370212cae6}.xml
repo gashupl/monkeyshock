@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{6790c59d-0a04-4993-9c29-7c370212cae6}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{827447f1-39cd-46c4-a2af-d4fb20e34181}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{45e27ac2-a929-4796-b877-93f90664fd0f}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{00129844-8b95-4500-b228-8f56d6a5324b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="name" languagecode="1033" />
+                        </labels>
+                        <control id="pg_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pg_name" uniqueid="{556669c9-ba63-1000-c0b8-de73bb2d8e0c}" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5e2f2505-08c6-4b41-9d48-b1c22c38c1c9}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9c4cedb6-9888-1a36-0a68-d0d3413810a8}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Test" languagecode="1033" />
+                        </labels>
+                        <control id="pg_test" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="pg_test" disabled="false" uniqueid="{054e5512-d76d-e75d-8648-c59bbd4e8dee}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="secHidden" id="ea629b85-7dae-4527-b55c-9f699b2d2849" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false">
+                  <labels>
+                    <label description="Hidden" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{6304cba8-f55a-4ca7-830d-554c73992cd5}" locklevel="0">
+                        <labels>
+                          <label description="Entity Id" languagecode="1033" />
+                        </labels>
+                        <control id="pg_entityidentifier" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pg_entityidentifier" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4965b5ea-456a-46ce-8a7a-51c9baa8ac48}" locklevel="0">
+                        <labels>
+                          <label description="Entity Name" languagecode="1033" />
+                        </labels>
+                        <control id="pg_entityname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pg_entityname" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions>
+        <controlDescription forControl="{054e5512-d76d-e75d-8648-c59bbd4e8dee}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>pg_test</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="pg_MonkeyShock.PowerPlatform.Components.DemoComponent">
+            <parameters>
+              <Name>pg_test</Name>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="pg_MonkeyShock.PowerPlatform.Components.DemoComponent">
+            <parameters>
+              <Name>pg_test</Name>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="pg_MonkeyShock.PowerPlatform.Components.DemoComponent">
+            <parameters>
+              <Name>pg_test</Name>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <header id="{7af2a4e3-3dc7-4806-b562-ca2866c6c66e}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{29d6a5c3-9afa-4b36-a3b4-874e92081bf9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9ca473f1-456b-455b-9d05-d8443f20c123}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4e71eb9f-a274-44cf-bca8-f5035a4e71ca}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{eda62089-5798-4598-843e-433174569f2b}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{efe0320b-76e0-4c00-a4ef-1bcae18ab0fb}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{7a2fc2ad-32f2-45f8-9550-9f5ca1db8ada}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{31920147-b6c4-492e-a56b-9e45ca3584c9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

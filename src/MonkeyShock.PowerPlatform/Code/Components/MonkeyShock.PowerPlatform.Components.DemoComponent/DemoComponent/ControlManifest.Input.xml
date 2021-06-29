@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="MonkeyShock.PowerPlatform.Components" constructor="DemoComponent" version="0.0.1" display-name-key="DemoComponent" description-key="DemoComponent description" control-type="standard">
+  <property name="Name" display-name-key="Name" description-key="A name" of-type="SingleLine.Text" usage="bound" required="true" />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/DemoComponent.css" order="1" />
+    </resources>
+  </control>
+</manifest>

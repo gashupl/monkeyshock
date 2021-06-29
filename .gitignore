@@ -1,0 +1,8 @@
+v16
+src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.Plugins/bin/
+src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.Plugins/obj/
+src/MonkeyShock.PowerPlatform/packages/
+src/MonkeyShock.PowerPlatform/Tests/Dataverse/MonkeyShock.PowerPlatform.Dataverse.Plugins.UnitTests/bin/
+src/MonkeyShock.PowerPlatform/Tests/Dataverse/MonkeyShock.PowerPlatform.Dataverse.Plugins.UnitTests/obj/
+/src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.Context/bin/Release
+/src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.Context/obj/Release

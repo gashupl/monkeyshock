@@ -1,0 +1,61 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- checkout: self
+  persistCredentials: true
+
+- task: MSCRMToolInstaller@12
+  inputs:
+    nugetFeed: 'official'
+    psFeed: 'official'
+
+- task: MSCRMExportSolution@12
+  inputs:
+    crmConnectionString: 'AuthType=Office365;Url=https://$(CdsOrganization).crm4.dynamics.com/;Username=$(CdsLogin);Password=$(CdsPassword)'
+    solutionName: 'SolutionName'
+    exportManaged: false
+    exportUnmanaged: true
+    outputPath: '$(build.binariesdirectory)'
+    crmConnectionTimeout: '1200'
+    useAsyncMode: true
+    asyncWaitTimeout: '1200'
+
+- task: MSCRMExtractSolution@12
+  inputs:
+    unpackedFilesFolder: '$(Build.ArtifactStagingDirectory)/solutions/SolutionName'
+    mappingFile: 'src/Infrastructure/Resources/solution-map.xml'
+    solutionFile: '$(build.binariesdirectory)\SolutionName.zip'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      Write-Host "Cloning current repository state..."
+      git clone -v --recurse-submodules --progress "https://$(System.AccessToken)@dev.azure.com/statenslegemiddelverk/SolutionName/_git/power-platform-code-repository" 
+      Write-Host "Switch directory to newly cloned repository."
+      cd power-platform-code-repository
+      Write-Host "Create and checkout new branch"
+      git checkout -b "cds-customizations-autobackup" "origin/cds-customizations-autobackup"
+      Write-Host "Remove old version of solution files"
+      Remove-Item .\solutions\* -Recurse
+      Write-Host "Copy package file to this local git directory."
+      Copy-Item "$(Build.ArtifactStagingDirectory)\solutions\*" .\solutions\ -Recurse
+      Write-Host "Add files to GIT"
+      git add .
+      Write-Host "Setting who we are, i.e email and username."
+      git config user.email "pipeline@azure.com"
+      git config user.name "git-push"
+      $getDate = Get-Date -Format "dddd MM/dd/yyyy HH:mm K"
+      Write-Host "Commit package file to git."
+      git commit -m "Update crm customization backup on $($getDate)"
+      Write-Host "Push package file to remote branch."
+      git push
+      Write-Host "Operation completed"

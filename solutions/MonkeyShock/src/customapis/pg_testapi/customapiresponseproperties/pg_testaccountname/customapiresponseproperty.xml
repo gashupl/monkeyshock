@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="pg_testaccountname">
+  <description default="Test Account Name">
+    <label description="Test Account Name" languagecode="1033" />
+  </description>
+  <displayname default="Test Account Name">
+    <label description="Test Account Name" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>Test Account Name</name>
+  <type>10</type>
+</customapiresponseproperty>

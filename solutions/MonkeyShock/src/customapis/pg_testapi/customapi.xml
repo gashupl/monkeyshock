@@ -1,0 +1,18 @@
+<customapi uniquename="pg_testapi">
+  <allowedcustomprocessingsteptype>2</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="TestApi">
+    <label description="TestApi" languagecode="1033" />
+  </description>
+  <displayname default="TestApi">
+    <label description="TestApi" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>1</isfunction>
+  <isprivate>0</isprivate>
+  <name>TestApi</name>
+  <plugintypeid>
+    <plugintypeid>2e16d442-8300-4adf-9bb6-54ceaf63ac71</plugintypeid>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

@@ -1,0 +1,98 @@
+# Pipeline for building Power Platform model-driven app code and all its extensions
+
+trigger:
+  branches:
+    include:
+    - '*'
+
+name: '$(Build.SourceBranchName).$(Build.BuildId)'
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/MonkeyShock.PowerPlatform.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@1
+  displayName: Install Nuget 
+
+- task: NuGetCommand@2
+  displayName: Restore nugets for solution
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: MSCRMToolInstaller@12
+  displayName: Install MSCRMTools 
+  inputs:
+    nugetFeed: 'official'
+    psFeed: 'official'
+
+- task: PowerPlatformToolInstaller@0
+  displayName: Install Power Platform Tools (Including CLI) 
+  inputs:
+    DefaultVersion: true
+
+- task: VSBuild@1
+  displayName: Build VS solution
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSTest@2
+  displayName: Run unit tests
+  inputs:
+    platform: '$(buildPlatform)'
+    codeCoverageEnabled: true
+    resultsFolder: '$(Build.SourcesDirectory)/src/TestResults'
+
+- task: MSCRMPackSolution@12
+  displayName: Build dataverse Monkeyshock solution
+  inputs:
+    unpackedFilesFolder: 'solutions/MonkeyShock/src'
+    mappingFile: 'src/MonkeyShock.PowerPlatform/Infrastructure/Resources/solution-map.xml'
+    outputPath: '$(build.binariesdirectory)/solutions'
+
+- task: Npm@1
+  displayName: Install missing NPM packages for Demo PCF Control
+  inputs:
+    command: 'install'
+    workingDir: 'src/MonkeyShock.PowerPlatform/Code/Components/MonkeyShock.PowerPlatform.Components.DemoComponent/'
+
+- task: Npm@1
+  displayName: Build Demo PCF Control
+  inputs:
+    command: 'custom'
+    workingDir: 'src/MonkeyShock.PowerPlatform/Code/Components/MonkeyShock.PowerPlatform.Components.DemoComponent/'
+    customCommand: 'run build'
+    
+- task: PowerShell@2
+  displayName: Create solution for PCF Controls with MSBuild
+  inputs:
+    targetType: 'inline'
+    script: '& "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" /t:build /restore /p:configuration=Release'
+    workingDirectory: 'solutions/MonkeyShockControls'
+
+- task: CopyFiles@2
+  displayName: Copy MonkeyShock control solutions to artifact folder
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/solutions/MonkeyShockControls/bin/Release/'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/solutions'
+    
+- task: CopyFiles@2
+  displayName: Copy binaries to artifact folder
+  inputs:
+    SourceFolder: '$(build.binariesdirectory)'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    
+- task: PublishBuildArtifacts@1
+  displayName: Publish build artifacts
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'DataverseSolutionArtifact'
+

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginAssembly FullName="MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" PluginAssemblyId="7ca15614-dbc4-406c-811f-faac20b2e75d" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsolationMode>2</IsolationMode>
+  <SourceType>0</SourceType>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <FileName>/PluginAssemblies/MonkeyShockPowerPlatformDataversePlugins-7CA15614-DBC4-406C-811F-FAAC20B2E75D/MonkeyShockPowerPlatformDataversePlugins.dll</FileName>
+  <PluginTypes>
+    <PluginType AssemblyQualifiedName="MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.Common.SetRecordIdNamePlugin, MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" PluginTypeId="ae752c4b-6d12-4260-a9c6-01888f5e6a51" Name="MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.Common.SetRecordIdNamePlugin">
+      <FriendlyName>fd518e3b-2cda-4ef9-a6de-eab27a24987e</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.TestApi.TestApiPlugin, MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" PluginTypeId="2e16d442-8300-4adf-9bb6-54ceaf63ac71" Name="MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.TestApi.TestApiPlugin">
+      <FriendlyName>76864525-ef23-4d9e-a6fb-ed8e22595dd6</FriendlyName>
+    </PluginType>
+    <PluginType AssemblyQualifiedName="MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.TestApi.TestPostApiPlugin, MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" PluginTypeId="37aea5f9-7f24-484f-979e-11f90e9c46a2" Name="MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.TestApi.TestPostApiPlugin">
+      <FriendlyName>994bba69-b03b-4a8c-aae4-f0b4cfdb5801</FriendlyName>
+    </PluginType>
+  </PluginTypes>
+</PluginAssembly>

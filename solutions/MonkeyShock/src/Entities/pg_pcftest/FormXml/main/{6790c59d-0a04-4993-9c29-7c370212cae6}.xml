@@ -36,11 +36,11 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{9c4cedb6-9888-1a36-0a68-d0d3413810a8}" showlabel="true" locklevel="0">
+                      <cell id="{9c4cedb6-9888-1a36-0a68-d0d3413810a8}" showlabel="true" locklevel="0" visible="false">
                         <labels>
                           <label description="Test" languagecode="1033" />
                         </labels>
-                        <control id="pg_test" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="pg_test" disabled="false" uniqueid="{054e5512-d76d-e75d-8648-c59bbd4e8dee}" />
+                        <control id="pg_test" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="pg_test" disabled="false" uniqueid="{4755d40b-6ca5-9bde-a766-309788014eea}" />
                       </cell>
                     </row>
                   </rows>
@@ -74,7 +74,7 @@
         </tab>
       </tabs>
       <Navigation>
-        <NavBar />
+        <NavBar></NavBar>
         <NavBarAreas>
           <NavBarArea Id="Info">
             <Titles>
@@ -104,8 +104,8 @@
         </NavBarAreas>
       </Navigation>
       <controlDescriptions>
-        <controlDescription forControl="{054e5512-d76d-e75d-8648-c59bbd4e8dee}">
-          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+        <controlDescription forControl="{4755d40b-6ca5-9bde-a766-309788014eea}">
+          <customControl id="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}">
             <parameters>
               <datafieldname>pg_test</datafieldname>
             </parameters>
@@ -113,16 +113,25 @@
           <customControl formFactor="0" name="pg_MonkeyShock.PowerPlatform.Components.DemoComponent">
             <parameters>
               <Name>pg_test</Name>
+              <Id>pg_entityidentifier</Id>
+              <EntityName>pg_entityname</EntityName>
+              <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
             </parameters>
           </customControl>
           <customControl formFactor="1" name="pg_MonkeyShock.PowerPlatform.Components.DemoComponent">
             <parameters>
               <Name>pg_test</Name>
+              <Id>pg_entityidentifier</Id>
+              <EntityName>pg_entityname</EntityName>
+              <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
             </parameters>
           </customControl>
           <customControl formFactor="2" name="pg_MonkeyShock.PowerPlatform.Components.DemoComponent">
             <parameters>
               <Name>pg_test</Name>
+              <Id>pg_entityidentifier</Id>
+              <EntityName>pg_entityname</EntityName>
+              <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
             </parameters>
           </customControl>
         </controlDescription>

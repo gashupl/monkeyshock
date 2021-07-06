@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
   <control namespace="MonkeyShock.PowerPlatform.Components" constructor="DemoComponent" version="0.0.1" display-name-key="DemoComponent" description-key="DemoComponent description" control-type="standard">
+  <property name="Name" display-name-key="Name" description-key="A name" of-type="SingleLine.Text" usage="bound" required="true" />
   <property name="Id" display-name-key="Id" description-key="Entity Id" of-type="SingleLine.Text" usage="bound" required="true" />
   <property name="EntityName" display-name-key="EntityName" description-key="Logical Name" of-type="SingleLine.Text" usage="bound" required="true" />
     <resources>

@@ -1,5 +1,7 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
+declare var Xrm: any;
+
 export class DemoComponent implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
 	private context: ComponentFramework.Context<IInputs>;
@@ -64,6 +66,23 @@ export class DemoComponent implements ComponentFramework.StandardControl<IInputs
 		// Add the message container and button to the overall control container
 		this.container.appendChild(messageContainer);
 		this.container.appendChild(button);
+
+		// Create the button element to switch between edit and read modes
+		const btnXrm = document.createElement("button");
+		btnXrm.textContent = "Access XRM"; 
+		btnXrm.addEventListener("click", this.btnXrmClick);
+
+		this.container.appendChild(btnXrm);
+	}
+
+	public btnXrmClick() {
+		if(typeof(<any>Xrm) !== 'undefined'){
+			var url: string = (<any>Xrm).Utility.getGlobalContext().getClientUrl();
+			alert(url); 
+		}
+		else{
+			alert("Xrm is not defined!"); 
+		}
 	}
 
 	// The event handler for the button's click event

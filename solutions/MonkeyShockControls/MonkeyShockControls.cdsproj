@@ -14,6 +14,7 @@
     <TargetFramework>net462</TargetFramework>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <SolutionRootPath>src</SolutionRootPath>
+    <SolutionPackageType>Unmanaged</SolutionPackageType>
   </PropertyGroup>
 
   <!-- Solution Packager overrides, un-comment to use: SolutionPackagerType (Managed, Unmanaged, Both)

@@ -36,7 +36,7 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{9c4cedb6-9888-1a36-0a68-d0d3413810a8}" showlabel="true" locklevel="0" visible="false">
+                      <cell id="{9c4cedb6-9888-1a36-0a68-d0d3413810a8}" showlabel="true" locklevel="0">
                         <labels>
                           <label description="Test" languagecode="1033" />
                         </labels>

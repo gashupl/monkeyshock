@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.21061.141" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.21062.131" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>MonkeyShock</UniqueName>
     <LocalizedNames>
@@ -94,7 +94,7 @@
         <Dependent type="80" schemaName="pg_MonkeyShock" displayName="MonkeyShock" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" displayName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" solution="MonkeyShockControls (1.0)" />
+        <Required type="66" schemaName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" displayName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" solution="Active" />
         <Dependent type="60" displayName="Information" parentDisplayName="Pcf Test" id="{6790c59d-0a04-4993-9c29-7c370212cae6}" />
       </MissingDependency>
     </MissingDependencies>

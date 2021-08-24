@@ -1,4 +1,6 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
+import { XrmClient } from "./Internal/XrmClient";
+import { ButtonFactory } from "./Internal/ButtonFactory";
 
 export class DemoComponent implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
@@ -8,26 +10,22 @@ export class DemoComponent implements ComponentFramework.StandardControl<IInputs
 	private isEditMode: boolean;
 	private buttonClickHandler: EventListener;
 	private name: string | null;
+	private xrmClient : XrmClient; 
+	private buttonFactory: ButtonFactory; 
 
 	constructor() {
 
 	}
 
-	/**
-	* Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
-	* Data-set values are not initialized here, use updateView.
-	* @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
-	* @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
-	* @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
-	* @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
-	*/
 	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement) {
-		// Track all the things
+
 		this.context = context;
 		this.notifyOutputChanged = notifyOutputChanged;
 		this.container = container;
 		this.isEditMode = false;
 		this.buttonClickHandler = this.buttonClick.bind(this);
+		this.xrmClient = new XrmClient(); 
+		this.buttonFactory = new ButtonFactory(); 
 
 		// Create the span element to hold the hello message
 		const message = document.createElement("span");
@@ -64,9 +62,11 @@ export class DemoComponent implements ComponentFramework.StandardControl<IInputs
 		// Add the message container and button to the overall control container
 		this.container.appendChild(messageContainer);
 		this.container.appendChild(button);
+
+		const btnXrm = this.buttonFactory.getButton("Access XRM", this.xrmClient.getUrl);
+		this.container.appendChild(btnXrm);
 	}
 
-	// The event handler for the button's click event
 	public buttonClick() {
 		// Get our controls via DOM queries
 		const textbox = this.container.querySelector("input")!;
@@ -94,9 +94,6 @@ export class DemoComponent implements ComponentFramework.StandardControl<IInputs
 		button.textContent = this.isEditMode ? "Save" : "Edit";
 	}
 
-	/**
-	* Run when input value (for example on model-driven form has been changed
-	*/
 	public updateView(context: ComponentFramework.Context<IInputs>): void {
 		// Checks for updates coming in from outside
 		this.name = context.parameters.Name.raw;
@@ -104,9 +101,6 @@ export class DemoComponent implements ComponentFramework.StandardControl<IInputs
 		message.innerText = `Hello ${this.name}`;
 	}
 
-	/** 
-	* Run when value inside control has been changed
-	*/
 	public getOutputs(): IOutputs {
 		return {
 			// If our name variable is null, return undefined instead

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.21061.141" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.21073.140" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>MonkeyShock</UniqueName>
     <LocalizedNames>
@@ -82,7 +82,6 @@
     <RootComponents>
       <RootComponent type="1" schemaName="pg_demo" behavior="0" />
       <RootComponent type="1" schemaName="pg_pcftest" behavior="0" />
-      <RootComponent type="60" id="{6790c59d-0a04-4993-9c29-7c370212cae6}" behavior="0" />
       <RootComponent type="62" schemaName="pg_MonkeyShock" behavior="0" />
       <RootComponent type="80" schemaName="pg_MonkeyShock" behavior="0" />
       <RootComponent type="91" id="{7ca15614-dbc4-406c-811f-faac20b2e75d}" schemaName="MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" behavior="0" />
@@ -94,7 +93,7 @@
         <Dependent type="80" schemaName="pg_MonkeyShock" displayName="MonkeyShock" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" displayName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" solution="MonkeyShockControls (1.0)" />
+        <Required type="66" schemaName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" displayName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" solution="Active" />
         <Dependent type="60" displayName="Information" parentDisplayName="Pcf Test" id="{6790c59d-0a04-4993-9c29-7c370212cae6}" />
       </MissingDependency>
     </MissingDependencies>

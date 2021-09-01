@@ -63,7 +63,7 @@ export class DemoComponent implements ComponentFramework.StandardControl<IInputs
 		this.container.appendChild(messageContainer);
 		this.container.appendChild(button);
 
-		const btnXrm = this.buttonFactory.getButton("Access XRM", this.xrmClient.getUrl);
+		const btnXrm = this.buttonFactory.getButton("Access XRM", this.xrmClient.createAccount);
 		this.container.appendChild(btnXrm);
 	}
 

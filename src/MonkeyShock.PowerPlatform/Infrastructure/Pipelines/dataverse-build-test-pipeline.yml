@@ -71,7 +71,7 @@ steps:
         $solutionXml.Load($solutionFullPath)
         $nodes = $solutionXml.SelectNodes("/manifest/control"); 
         foreach($node in $nodes) {
-            $node.SetAttribute("branch", "New York");
+            $node.SetAttribute("version", "$(version)");
         }
         $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
 

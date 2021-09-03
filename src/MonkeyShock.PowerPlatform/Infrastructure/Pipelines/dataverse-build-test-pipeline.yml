@@ -68,7 +68,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-        $solutionFullPath = "solutions/MonkeyShockControls/src/OtherSolution.xml"
+        $solutionFullPath = "solutions/MonkeyShockControls/src/Other/Solution.xml"
         $solutionXml = New-Object System.Xml.XmlDocument
         $solutionXml.PreserveWhitespace = $true
         $solutionXml.Load($solutionFullPath)

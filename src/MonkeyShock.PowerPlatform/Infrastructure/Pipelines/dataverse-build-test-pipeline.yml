@@ -36,21 +36,6 @@ steps:
   inputs:
     DefaultVersion: true
 
-- task: VSBuild@1
-  displayName: Build VS solution
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  displayName: Run unit tests
-  inputs:
-    platform: '$(buildPlatform)'
-    codeCoverageEnabled: true
-    resultsFolder: '$(Build.SourcesDirectory)/src/TestResults'
-
-    
 - task: PowerShell@2
   displayName: Update MokneyShock solution version 
   inputs:
@@ -89,6 +74,20 @@ steps:
             $node.SetAttribute("branch", "New York");
         }
         $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
+
+- task: VSBuild@1
+  displayName: Build VS solution
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSTest@2
+  displayName: Run unit tests
+  inputs:
+    platform: '$(buildPlatform)'
+    codeCoverageEnabled: true
+    resultsFolder: '$(Build.SourcesDirectory)/src/TestResults'
 
 - task: MSCRMPackSolution@12
   displayName: Build dataverse Monkeyshock solution

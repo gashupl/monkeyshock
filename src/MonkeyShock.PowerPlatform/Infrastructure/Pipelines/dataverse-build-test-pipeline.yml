@@ -14,6 +14,8 @@ variables:
   solution: '**/MonkeyShock.PowerPlatform.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  version: '1.0.1.$(Build.BuildId)'
+  pcfVersion: '1.1.$(Build.BuildId)'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -34,6 +36,45 @@ steps:
   displayName: Install Power Platform Tools (Including CLI) 
   inputs:
     DefaultVersion: true
+
+- task: PowerShell@2
+  displayName: Update MokneyShock solution version 
+  inputs:
+    targetType: 'inline'
+    script: |
+        $solutionFullPath = "solutions/MonkeyShock/src/Other/Solution.xml"
+        $solutionXml = New-Object System.Xml.XmlDocument
+        $solutionXml.PreserveWhitespace = $true
+        $solutionXml.Load($solutionFullPath)
+        $solutionXml.SelectSingleNode("/ImportExportXml/SolutionManifest/Version").'#text' = '$(version)'
+        $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
+
+- task: PowerShell@2
+  displayName: Update MokneyShockControls solution version 
+  inputs:
+    targetType: 'inline'
+    script: |
+        $solutionFullPath = "solutions/MonkeyShockControls/src/Other/Solution.xml"
+        $solutionXml = New-Object System.Xml.XmlDocument
+        $solutionXml.PreserveWhitespace = $true
+        $solutionXml.Load($solutionFullPath)
+        $solutionXml.SelectSingleNode("/ImportExportXml/SolutionManifest/Version").'#text' = '$(version)'
+        $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
+
+- task: PowerShell@2
+  displayName: Update PCF control version in manifest
+  inputs:
+    targetType: 'inline'
+    script: |
+        $solutionFullPath = "src/MonkeyShock.PowerPlatform/Code/Components/MonkeyShock.PowerPlatform.Components.DemoComponent/DemoComponent/ControlManifest.Input.xml"
+        $solutionXml = New-Object System.Xml.XmlDocument
+        $solutionXml.PreserveWhitespace = $true
+        $solutionXml.Load($solutionFullPath)
+        $nodes = $solutionXml.SelectNodes("/manifest/control"); 
+        foreach($node in $nodes) {
+            $node.SetAttribute("version", "$(pcfVersion)");
+        }
+        $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
 
 - task: VSBuild@1
   displayName: Build VS solution

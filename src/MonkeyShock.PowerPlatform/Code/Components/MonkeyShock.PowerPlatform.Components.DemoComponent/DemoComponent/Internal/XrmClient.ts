@@ -17,7 +17,7 @@ export class XrmClient {
 
     createAccount(): void {
 
-        let createdOn = Date.now();
+        let createdOn = new Date().toLocaleDateString();
 
         // define the data to create new account
         let data =

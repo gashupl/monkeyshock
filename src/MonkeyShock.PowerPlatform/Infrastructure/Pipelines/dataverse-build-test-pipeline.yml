@@ -15,6 +15,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   version: '1.0.1.$(Build.BuildId)'
+  pcfVersion: '1.1.$(Build.BuildId)'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -71,7 +72,7 @@ steps:
         $solutionXml.Load($solutionFullPath)
         $nodes = $solutionXml.SelectNodes("/manifest/control"); 
         foreach($node in $nodes) {
-            $node.SetAttribute("version", "$(version)");
+            $node.SetAttribute("version", "$(pcfVersion)");
         }
         $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
 

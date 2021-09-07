@@ -62,7 +62,7 @@ steps:
         $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
 
 - task: PowerShell@2
-  displayName: Update PCF control version in manifest
+  displayName: Update PCF DemoComponent control version in manifest
   inputs:
     targetType: 'inline'
     script: |
@@ -75,6 +75,21 @@ steps:
             $node.SetAttribute("version", "$(pcfVersion)");
         }
         $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
+
+- task: PowerShell@2
+  displayName: Update PCF HappyFace control version in manifest
+  inputs:
+    targetType: 'inline'
+    script: |
+        $solutionFullPath = "src/MonkeyShock.PowerPlatform/Code/Components/MonkeyShock.PowerPlatform.Components.HappyFace/HappyFace/ControlManifest.Input.xml"
+        $solutionXml = New-Object System.Xml.XmlDocument
+        $solutionXml.PreserveWhitespace = $true
+        $solutionXml.Load($solutionFullPath)
+        $nodes = $solutionXml.SelectNodes("/manifest/control"); 
+        foreach($node in $nodes) {
+            $node.SetAttribute("version", "$(pcfVersion)");
+        }
+        $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline
 
 - task: VSBuild@1
   displayName: Build VS solution
@@ -97,6 +112,7 @@ steps:
     mappingFile: 'src/MonkeyShock.PowerPlatform/Infrastructure/Resources/solution-map.xml'
     outputPath: '$(build.binariesdirectory)/solutions'
 
+# DemoComponent control related steps - start
 - task: Npm@1
   displayName: Install missing NPM packages for Demo PCF Control
   inputs:
@@ -109,7 +125,24 @@ steps:
     command: 'custom'
     workingDir: 'src/MonkeyShock.PowerPlatform/Code/Components/MonkeyShock.PowerPlatform.Components.DemoComponent/'
     customCommand: 'run build'
-    
+# DemoComponent control related steps - end
+
+# HappyFace control related steps - start
+- task: Npm@1
+  displayName: Install missing NPM packages for HappyFace PCF Control
+  inputs:
+    command: 'install'
+    workingDir: 'src/MonkeyShock.PowerPlatform/Code/Components/MonkeyShock.PowerPlatform.Components.HappyFace/'
+
+- task: Npm@1
+  displayName: Build HappyFace PCF Control
+  inputs:
+    command: 'custom'
+    workingDir: 'src/MonkeyShock.PowerPlatform/Code/Components/MonkeyShock.PowerPlatform.Components.HappyFace/'
+    customCommand: 'run build'
+   
+# HappyFace control related steps - end
+
 - task: PowerShell@2
   displayName: Create solution for PCF Controls with MSBuild
   inputs:
@@ -123,7 +156,7 @@ steps:
     SourceFolder: '$(Build.SourcesDirectory)/solutions/MonkeyShockControls/bin/Release/'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)/solutions'
-    
+
 - task: CopyFiles@2
   displayName: Copy binaries to artifact folder
   inputs:

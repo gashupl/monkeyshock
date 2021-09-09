@@ -20,11 +20,11 @@
                   </labels>
                   <rows>
                     <row>
-                      <cell id="{a0a9767e-868d-4248-84fa-bc2b10c3c739}">
+                      <cell id="{a0a9767e-868d-4248-84fa-bc2b10c3c739}" showlabel="false" locklevel="0">
                         <labels>
                           <label description="Name" languagecode="1033" />
                         </labels>
-                        <control id="pg_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pg_name" />
+                        <control id="pg_name" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="pg_name" uniqueid="{bd3e019a-aa35-5ae7-e1a4-20e6723d0061}" disabled="false" />
                       </cell>
                     </row>
                   </rows>
@@ -39,7 +39,7 @@
                         <labels>
                           <label description="Entity Id" languagecode="1033" />
                         </labels>
-                        <control id="pg_entityidentifier" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pg_entityidentifier" disabled="false" />
+                        <control id="pg_entityidentifier" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pg_entityidentifier" disabled="false" uniqueid="{00bceaa2-8660-9903-a8c9-437ee6a80184}" />
                       </cell>
                     </row>
                     <row>
@@ -99,6 +99,69 @@
           </row>
         </rows>
       </footer>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions>
+        <controlDescription forControl="{bd3e019a-aa35-5ae7-e1a4-20e6723d0061}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>pg_name</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="pg_MonkeyShock.PowerPlatform.Components.HappyFace">
+            <parameters>
+              <Name>pg_name</Name>
+              <Id>pg_entityidentifier</Id>
+              <EntityName>pg_entityname</EntityName>
+              <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="pg_MonkeyShock.PowerPlatform.Components.HappyFace">
+            <parameters>
+              <Name>pg_name</Name>
+              <Id>pg_entityidentifier</Id>
+              <EntityName>pg_entityname</EntityName>
+              <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="pg_MonkeyShock.PowerPlatform.Components.HappyFace">
+            <parameters>
+              <Name>pg_name</Name>
+              <Id>pg_entityidentifier</Id>
+              <EntityName>pg_entityname</EntityName>
+              <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
       <DisplayConditions Order="0" FallbackForm="true">
         <Everyone />
       </DisplayConditions>

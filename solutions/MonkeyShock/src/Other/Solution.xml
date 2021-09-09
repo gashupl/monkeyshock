@@ -97,6 +97,10 @@
         <Required type="66" schemaName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" displayName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" solution="Active" />
         <Dependent type="60" displayName="Information" parentDisplayName="Pcf Test" id="{6790c59d-0a04-4993-9c29-7c370212cae6}" />
       </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="pg_MonkeyShock.PowerPlatform.Components.HappyFace" displayName="pg_MonkeyShock.PowerPlatform.Components.HappyFace" solution="Active" />
+        <Dependent type="60" displayName="Information" parentDisplayName="Demo" id="{a12dee1c-b33a-4fc5-a150-d393a4bc2640}" />
+      </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>

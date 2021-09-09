@@ -488,7 +488,7 @@
           <Type>nvarchar</Type>
           <Name>pg_name</Name>
           <LogicalName>pg_name</LogicalName>
-          <RequiredLevel>required</RequiredLevel>
+          <RequiredLevel>none</RequiredLevel>
           <DisplayMask>ActivityPointerRegardingName|PrimaryName|ValidForAdvancedFind|ValidForForm|ValidForGrid|RequiredForForm</DisplayMask>
           <ImeMode>auto</ImeMode>
           <ValidForUpdateApi>1</ValidForUpdateApi>

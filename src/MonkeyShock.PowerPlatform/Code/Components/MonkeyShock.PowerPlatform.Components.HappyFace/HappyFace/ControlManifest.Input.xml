@@ -6,6 +6,8 @@
   <property name="EntityName" display-name-key="EntityName" description-key="Logical Name" of-type="SingleLine.Text" usage="bound" required="true" />
     <resources>
       <code path="index.ts" order="1"/>
+      <img path="img/Smile128.png" />
+      <img path="img/Sad128.png" />
       <!-- UNCOMMENT TO ADD MORE RESOURCES
       <css path="css/HappyFace.css" order="1" />
       <resx path="strings/HappyFace.1033.resx" version="1.0.0" />

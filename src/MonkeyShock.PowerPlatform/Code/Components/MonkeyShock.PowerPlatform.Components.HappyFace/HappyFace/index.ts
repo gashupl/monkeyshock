@@ -2,9 +2,10 @@ import {IInputs, IOutputs} from "./generated/ManifestTypes";
 
 export class HappyFace implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
-	/**
-	 * Empty constructor.
-	 */
+	private context: ComponentFramework.Context<IInputs>;
+	private container: HTMLDivElement;
+	private notifyOutputChanged: () => void;
+
 	constructor()
 	{
 
@@ -20,7 +21,23 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	 */
 	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
 	{
-		// Add control initialization code
+		this.context = context;
+		this.container = container;
+		this.notifyOutputChanged = notifyOutputChanged;
+
+		const imgSmile = document.createElement("img"); 
+		imgSmile.src = 'img/Smile128.png';
+		imgSmile.style.visibility = 'hidden'; 
+
+		const imgSad = document.createElement("img"); 
+		imgSad.src = 'img/Sad128.png';
+		imgSad.style.visibility = 'hidden'; 
+
+		const imagesContainer = document.createElement("div");
+		imagesContainer.appendChild(imgSmile);
+		imagesContainer.appendChild(imgSad);
+
+		this.container.appendChild(imagesContainer);
 	}
 
 

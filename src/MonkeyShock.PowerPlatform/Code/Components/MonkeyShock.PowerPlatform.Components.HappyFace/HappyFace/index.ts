@@ -1,10 +1,12 @@
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
+import { XrmClient } from "./xrmClient";
 
 export class HappyFace implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
 	private context: ComponentFramework.Context<IInputs>;
 	private container: HTMLDivElement;
 	private notifyOutputChanged: () => void;
+	private xrmClient : XrmClient; 
 
 	constructor()
 	{
@@ -24,12 +26,15 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 		this.context = context;
 		this.container = container;
 		this.notifyOutputChanged = notifyOutputChanged;
+		this.xrmClient = new XrmClient(); 
 
 		const imgSmile = document.createElement("img"); 
+		imgSmile.id = "imgSmile"; 
 		imgSmile.src = 'img/Smile128.png';
 		imgSmile.style.visibility = 'hidden'; 
 
 		const imgSad = document.createElement("img"); 
+		imgSad.id = "imgSad"; 
 		imgSad.src = 'img/Sad128.png';
 		imgSad.style.visibility = 'hidden'; 
 
@@ -47,7 +52,25 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	 */
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
-		// Add code to update control view
+		Promise.resolve(this.xrmClient.countOpenActivities()).then(function(result){
+			let smileVisibility = "visible"; 
+			let sadVisibility = "hidden"; 
+
+			if(result > 2){
+				smileVisibility = "hidden"; 
+				sadVisibility = "visible"; 
+			}
+
+			let smile = document.getElementById("imgSmile"); 
+			if(smile){
+				smile.style.visibility = smileVisibility; 
+			}
+			let sad = document.getElementById("imgSad"); 
+			if(sad){
+				sad.style.visibility = sadVisibility; 
+			}
+		}); 
+
 	}
 
 	/**

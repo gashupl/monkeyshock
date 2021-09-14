@@ -52,7 +52,7 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	 */
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
-		Promise.resolve(this.xrmClient.countOpenActivities()).then(function(result){
+		Promise.resolve(this.xrmClient.countOpenTasks()).then(function(result){
 			let smileVisibility = "visible"; 
 			let sadVisibility = "hidden"; 
 

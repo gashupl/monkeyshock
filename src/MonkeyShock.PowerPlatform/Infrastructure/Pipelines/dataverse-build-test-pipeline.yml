@@ -134,6 +134,13 @@ steps:
     command: 'install'
     workingDir: 'src/MonkeyShock.PowerPlatform/Code/Components/MonkeyShock.PowerPlatform.Components.HappyFace/'
 
+- task: PowerShell@2
+  displayName: Overwrite Webpack config for HappyFace control to include Source mapping file
+  inputs:
+    targetType: 'inline'
+    script: '& Copy-Item "config\HappyFace\webpackConfig.js" -Destination "MonkeyShock.PowerPlatform.Components.HappyFace\node_modules\pcf-scripts"'
+    workingDirectory: 'src/MonkeyShock.PowerPlatform/Code/Components'
+
 - task: Npm@1
   displayName: Build HappyFace PCF Control
   inputs:

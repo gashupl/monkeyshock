@@ -1,12 +1,18 @@
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
 import { XrmClient } from "./xrmClient";
 
+const smileImagePath : string = "./img/Smile128.png";
+const sadImagePath : string = "./img/Sad128.png";
+
 export class HappyFace implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
 	private context: ComponentFramework.Context<IInputs>;
 	private container: HTMLDivElement;
 	private notifyOutputChanged: () => void;
 	private xrmClient : XrmClient; 
+
+	private smileImgElement : HTMLImageElement;
+	private sadImgElement : HTMLImageElement;
 
 	constructor()
 	{
@@ -28,19 +34,21 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 		this.notifyOutputChanged = notifyOutputChanged;
 		this.xrmClient = new XrmClient(); 
 
-		const imgSmile = document.createElement("img"); 
-		imgSmile.id = "imgSmile"; 
-		imgSmile.src = 'img/Smile128.png';
-		imgSmile.style.visibility = 'hidden'; 
+		//Accoring to: https://powerusers.microsoft.com/t5/Power-Apps-Pro-Dev-ISV/Is-there-an-example-of-using-Image-Resources-within-PCF-control/td-p/342152
 
-		const imgSad = document.createElement("img"); 
-		imgSad.id = "imgSad"; 
-		imgSad.src = 'img/Sad128.png';
-		imgSad.style.visibility = 'hidden'; 
+		this.smileImgElement = document.createElement("img");	
+		this.smileImgElement.id = "imgSmile"; 
+		this.smileImgElement.style.visibility = 'hidden'; 
+		this.context.resources.getResource(smileImagePath, this.setSmileImage.bind(this, false, "png"), this.showError.bind(this));
+		
+		this.sadImgElement = document.createElement("img"); 
+		this.sadImgElement .id = "imgSad"; 
+		this.sadImgElement.style.visibility = 'hidden'; 
+		this.context.resources.getResource(sadImagePath, this.setSadImage.bind(this, false, "png"), this.showError.bind(this));
 
 		const imagesContainer = document.createElement("div");
-		imagesContainer.appendChild(imgSmile);
-		imagesContainer.appendChild(imgSad);
+		imagesContainer.appendChild(this.smileImgElement);
+		imagesContainer.appendChild(this.sadImgElement);
 
 		this.container.appendChild(imagesContainer);
 	}
@@ -89,5 +97,29 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	public destroy(): void
 	{
 		// Add code to cleanup control if necessary
+	}
+
+	private setSmileImage(shouldUpdateOutput: boolean, fileType: string, fileContent: string): void
+	{
+		let imageUrl: string = this.generateImageSrcUrl(fileType, fileContent);
+		this.smileImgElement.src = imageUrl;
+
+	}
+
+	private setSadImage(shouldUpdateOutput: boolean, fileType: string, fileContent: string): void
+	{
+		let imageUrl: string = this.generateImageSrcUrl(fileType, fileContent);
+		this.sadImgElement.src = imageUrl;
+
+	}
+
+	private generateImageSrcUrl(fileType: string, fileContent: string): string
+	{
+		return  "data&colon;image/" + fileType + ";base64, " + fileContent;
+	}
+
+	private showError(): void
+	{
+
 	}
 }

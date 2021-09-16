@@ -60,24 +60,33 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	 */
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
-		Promise.resolve(this.xrmClient.countOpenTasks()).then(function(result){
-			let smileVisibility = "visible"; 
-			let sadVisibility = "hidden"; 
+		
+		let smileVisibility = "visible"; 
+		let sadVisibility = "hidden"; 
 
-			if(result > 2){
-				smileVisibility = "hidden"; 
-				sadVisibility = "visible"; 
-			}
+		this.smileImgElement.style.visibility = smileVisibility; 
+		this.sadImgElement.style.visibility = sadVisibility; 
 
-			let smile = document.getElementById("imgSmile"); 
-			if(smile){
-				smile.style.visibility = smileVisibility; 
-			}
-			let sad = document.getElementById("imgSad"); 
-			if(sad){
-				sad.style.visibility = sadVisibility; 
-			}
-		}); 
+		this.xrmClient.countOpenTasks(
+			function(result: any){
+				let smileVisibility = "visible"; 
+				let sadVisibility = "hidden"; 
+
+				if(result > 2){
+					smileVisibility = "hidden"; 
+					sadVisibility = "visible"; 
+				}
+
+				let smile = document.getElementById("imgSmile"); 
+				if(smile){
+					smile.style.visibility = smileVisibility; 
+				}
+				let sad = document.getElementById("imgSad"); 
+				if(sad){
+					sad.style.visibility = sadVisibility; 
+				}
+			}, 
+			function(){}); 
 
 	}
 
@@ -117,7 +126,7 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	{
 		return  "data&colon;image/" + fileType + ";base64, " + fileContent;
 	}
-
+	
 	private showError(): void
 	{
 

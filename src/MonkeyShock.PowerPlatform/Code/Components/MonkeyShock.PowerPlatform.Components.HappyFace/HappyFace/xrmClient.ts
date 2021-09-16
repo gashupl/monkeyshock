@@ -5,12 +5,27 @@ export class XrmClient {
 
     constructor() { }
 
-    async countOpenTasks(){
+    countOpenTasks(resolve: any, reject: any){
 
-        var activities : any = await Xrm.WebApi.retrieveMultipleRecords(
-            "task", 
-            "?$filter=_regardingobjectid_value eq f81a9b22-b6d5-eb11-bacc-000d3aaf68aa and statecode eq 0", 
-            5); 
-        return activities.entities.lenght; 
+        return new Promise<any>((resolve, reject) => {
+            Xrm.WebApi.retrieveMultipleRecords(
+                "task", 
+                "?$filter=_regardingobjectid_value eq f81a9b22-b6d5-eb11-bacc-000d3aaf68aa and statecode eq 0", 
+                5).then(
+                    function success(result: any){
+                        if(result !== null && result !== undefined && result.entities !== null && result.entities.length >= 1){
+                            resolve(result.entities.lenght);
+                        } 
+                        else {
+                            console.log("Missing results");
+                            resolve(null);
+                        }
+                    },
+                    function (error: any){
+                        console.log(error);
+                        reject();
+                    }); 
+            }
+        );
     }
 }

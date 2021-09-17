@@ -14,6 +14,7 @@ export class XrmClient {
                 5).then(
                     function success(result: any){
                         console.log("success..."); 
+                        console.log(result); 
                         if(result !== null && result !== undefined && result.entities !== null){
                             resolve(result.entities.lenght);
                         } 

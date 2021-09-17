@@ -13,13 +13,11 @@ export class XrmClient {
                 5).then(
                     function success(result: any){
                         console.log("success..."); 
-                        console.log(result); 
-                        console.log(result.entities); 
-                        console.log(result.entities.lenght); 
+                        console.log(result.entities.length); 
                         if(result !== null && result !== undefined && result.entities !== null){
                             console.log("Calling resolve");
                             console.log(resolve); 
-                            resolve(result.entities.lenght);
+                            resolve(result.entities.length);
                         } 
                         else {
                             console.log("Missing results");

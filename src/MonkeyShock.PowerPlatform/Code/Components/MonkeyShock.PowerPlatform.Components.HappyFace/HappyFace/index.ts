@@ -29,12 +29,13 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	 */
 	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement): void
 	{
+		console.log("init..."); 
 		this.context = context;
 		this.container = container;
 		this.notifyOutputChanged = notifyOutputChanged;
 		this.xrmClient = new XrmClient(); 
 
-		//Accoring to: https://powerusers.microsoft.com/t5/Power-Apps-Pro-Dev-ISV/Is-there-an-example-of-using-Image-Resources-within-PCF-control/td-p/342152
+		//According to: https://powerusers.microsoft.com/t5/Power-Apps-Pro-Dev-ISV/Is-there-an-example-of-using-Image-Resources-within-PCF-control/td-p/342152
 
 		this.smileImgElement = document.createElement("img");	
 		this.smileImgElement.id = "imgSmile"; 
@@ -69,6 +70,7 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 
 		this.xrmClient.countOpenTasks(
 			function(result: any){
+				console.log("result exits");
 				let smileVisibility = "visible"; 
 				let sadVisibility = "hidden"; 
 

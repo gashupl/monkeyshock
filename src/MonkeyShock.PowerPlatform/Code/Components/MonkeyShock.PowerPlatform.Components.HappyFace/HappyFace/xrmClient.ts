@@ -6,7 +6,6 @@ export class XrmClient {
     constructor() { }
 
     countOpenTasks(resolve: any, reject: any){
-        console.log("countOpenTasks..."); 
         return new Promise<any>((resolve, reject) => {
             Xrm.WebApi.retrieveMultipleRecords(
                 "task", 
@@ -15,7 +14,11 @@ export class XrmClient {
                     function success(result: any){
                         console.log("success..."); 
                         console.log(result); 
+                        console.log(result.entities); 
+                        console.log(result.entities.lenght); 
                         if(result !== null && result !== undefined && result.entities !== null){
+                            console.log("Calling resolve");
+                            console.log(resolve); 
                             resolve(result.entities.lenght);
                         } 
                         else {

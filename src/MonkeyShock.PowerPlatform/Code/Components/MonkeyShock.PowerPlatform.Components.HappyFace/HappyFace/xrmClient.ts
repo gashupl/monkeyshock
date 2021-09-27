@@ -5,7 +5,7 @@ export class XrmClient {
 
     constructor() { }
 
-    countOpenTasks(resolve: any, reject: any){
+    countOpenTasks(resolve: (result: any) => any, reject: (result: any) => any){
         return new Promise<any>((resolve, reject) => {
             Xrm.WebApi.retrieveMultipleRecords(
                 "task", 
@@ -26,7 +26,7 @@ export class XrmClient {
                     },
                     function failed(error: any){
                         console.log(error);
-                        reject();
+                        reject(error);
                     }); 
             }
         );

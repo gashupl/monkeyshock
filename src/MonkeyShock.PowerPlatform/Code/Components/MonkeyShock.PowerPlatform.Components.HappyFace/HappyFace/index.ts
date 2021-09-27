@@ -88,7 +88,7 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 					sad.style.visibility = sadVisibility; 
 				}
 			}, 
-			function(){}); 
+			function(result: any){}); 
 
 	}
 

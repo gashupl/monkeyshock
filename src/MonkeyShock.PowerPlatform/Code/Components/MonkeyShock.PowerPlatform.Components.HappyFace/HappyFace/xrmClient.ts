@@ -17,7 +17,24 @@ export class XrmClient {
                         if(result !== null && result !== undefined && result.entities !== null){
                             console.log("Calling resolve");
                             console.log(resolve); 
-                            resolve(result.entities.length);
+                         //   resolve(result.entities.length);
+                            console.log("result exits");
+                            let smileVisibility = "visible"; 
+                            let sadVisibility = "hidden"; 
+            
+                            if(result > 2){
+                                smileVisibility = "hidden"; 
+                                sadVisibility = "visible"; 
+                            }
+            
+                            let smile = document.getElementById("imgSmile"); 
+                            if(smile){
+                                smile.style.visibility = smileVisibility; 
+                            }
+                            let sad = document.getElementById("imgSad"); 
+                            if(sad){
+                                sad.style.visibility = sadVisibility; 
+                            }
                         } 
                         else {
                             console.log("Missing results");

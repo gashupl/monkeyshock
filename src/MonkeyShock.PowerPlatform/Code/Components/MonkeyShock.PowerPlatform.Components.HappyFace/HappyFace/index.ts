@@ -130,7 +130,7 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 
 	private generateImageSrcUrl(fileType: string, fileContent: string): string
 	{
-		return  "data&colon;image/" + fileType + ";base64, " + fileContent;
+		return  "data&colon;image/" + fileType + ";base64," + fileContent;
 	}
 	
 	private showError(): void

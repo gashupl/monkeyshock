@@ -1,0 +1,10 @@
+<environmentvariabledefinition schemaname="pg_samplesiteurl">
+  <defaultvalue>{default-value}</defaultvalue>
+  <displayname default="sample-site-url">
+    <label description="sample-site-url" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <type>100000000</type>
+</environmentvariabledefinition>

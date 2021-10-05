@@ -56,11 +56,11 @@ steps:
         $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
 
 - task: PowerShell@2
-  displayName: Update MokneyShockControls solution version 
+  displayName: Update configuration variables
   inputs:
     targetType: 'inline'
     script: |
-        $solutionFullPath = "solutions/MonkeyShockControls/src/environmentvariabledefinitions/pg_samplesiteurl/environmentvariabledefinition.xml"
+        $solutionFullPath = "solutions/MonkeyShock/src/environmentvariabledefinitions/pg_samplesiteurl/environmentvariabledefinition.xml"
         $solutionXml = New-Object System.Xml.XmlDocument
         $solutionXml.PreserveWhitespace = $true
         $solutionXml.Load($solutionFullPath)
@@ -68,7 +68,7 @@ steps:
         $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
 
 - task: PowerShell@2
-  displayName: Update Configuration variable 
+  displayName: Update MonkeyShockControls solution version
   inputs:
     targetType: 'inline'
     script: |

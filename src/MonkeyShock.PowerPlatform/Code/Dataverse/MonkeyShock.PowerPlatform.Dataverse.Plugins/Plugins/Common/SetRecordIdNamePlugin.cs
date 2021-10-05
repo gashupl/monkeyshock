@@ -8,7 +8,7 @@ namespace MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.Common
 {
     public class SetRecordIdNamePlugin : PluginBase
     {
-        public override void Execute(IPluginExecutionContext pluginExecutionContext, IDomainServicesFactory servicesFactory)
+        public override void Execute(IPluginExecutionContext pluginExecutionContext, IDomainServicesFactory servicesFactory, ITracingService tracingService)
         {
             if (pluginExecutionContext.InputParameters.ContainsKey(ParameterName.Target))
             {

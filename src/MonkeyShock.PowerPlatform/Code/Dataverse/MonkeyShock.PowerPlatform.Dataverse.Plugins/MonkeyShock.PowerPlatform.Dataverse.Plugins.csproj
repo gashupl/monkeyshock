@@ -66,10 +66,14 @@
     <Compile Include="Common\Values\CommonAttributesName.cs" />
     <Compile Include="DataAccess\Accounts\AccountRepository.cs" />
     <Compile Include="DataAccess\Accounts\IAccountRepository.cs" />
+    <Compile Include="DataAccess\EnvironmentVariables\EnvVariablesRepository.cs" />
+    <Compile Include="DataAccess\EnvironmentVariables\IEnvVariablesRepository.cs" />
     <Compile Include="DataAccess\IRepositoriesFactory.cs" />
     <Compile Include="DomainServices\Demo\DemoService.cs" />
     <Compile Include="DomainServices\Demo\IDemoService.cs" />
     <Compile Include="DomainServices\DomainServicesFactory.cs" />
+    <Compile Include="DomainServices\Environment\IVariablesService.cs" />
+    <Compile Include="DomainServices\Environment\VariablesService.cs" />
     <Compile Include="DomainServices\IDomainServicesFactory.cs" />
     <Compile Include="Common\Extensions\EnumExtensions.cs" />
     <Compile Include="Common\Extensions\IPluginExecutionContextExtensions.cs" />
@@ -84,6 +88,7 @@
     <Compile Include="DataAccess\RepositoriesFactory.cs" />
     <Compile Include="DomainServices\IService.cs" />
     <Compile Include="DomainServices\ServiceBase.cs" />
+    <Compile Include="Plugins\Common\ReadEnvironmentVariableSamplePlugin.cs" />
     <Compile Include="Plugins\Common\SetRecordIdNamePlugin.cs" />
     <Compile Include="Plugins\PluginBase.cs" />
     <Compile Include="Plugins\TestApi\TestApiPlugin.cs" />

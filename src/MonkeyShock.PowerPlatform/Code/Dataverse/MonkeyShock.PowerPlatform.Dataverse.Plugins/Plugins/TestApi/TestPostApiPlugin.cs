@@ -16,7 +16,7 @@ namespace MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.TestApi
     public class TestPostApiPlugin : PluginBase
     {
 
-        public override void Execute(IPluginExecutionContext pluginExecutionContext, IDomainServicesFactory servicesFactory)
+        public override void Execute(IPluginExecutionContext pluginExecutionContext, IDomainServicesFactory servicesFactory, ITracingService tracingService)
         {
             if (pluginExecutionContext.InputParameters.ContainsKey(nameof(pg_testpostapiRequest.pg_postname)))
             {

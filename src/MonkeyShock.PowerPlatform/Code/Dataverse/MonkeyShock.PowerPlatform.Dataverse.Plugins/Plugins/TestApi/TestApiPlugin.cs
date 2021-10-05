@@ -9,7 +9,7 @@ namespace MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.TestApi
     //Sample URL: https://piog.api.crm4.dynamics.com/api/data/v9.2/pg_testapi(pg_name='abc')
     public class TestApiPlugin : PluginBase
     {
-        public override void Execute(IPluginExecutionContext pluginExecutionContext, IDomainServicesFactory servicesFactory)
+        public override void Execute(IPluginExecutionContext pluginExecutionContext, IDomainServicesFactory servicesFactory, ITracingService tracingService)
         {
             if (pluginExecutionContext.InputParameters.ContainsKey(nameof(pg_testapiRequest.pg_name)))
             {

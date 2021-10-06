@@ -5,6 +5,9 @@
   <IntroducedVersion>1.0</IntroducedVersion>
   <FileName>/PluginAssemblies/MonkeyShockPowerPlatformDataversePlugins-7CA15614-DBC4-406C-811F-FAAC20B2E75D/MonkeyShockPowerPlatformDataversePlugins.dll</FileName>
   <PluginTypes>
+    <PluginType AssemblyQualifiedName="MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.Common.ReadEnvironmentVariableSamplePlugin, MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" PluginTypeId="f7447b24-b020-40e5-9143-9d5c5e31b114" Name="MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.Common.ReadEnvironmentVariableSamplePlugin">
+      <FriendlyName>a926260b-6860-43bc-8969-bdd67c53fcde</FriendlyName>
+    </PluginType>
     <PluginType AssemblyQualifiedName="MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.Common.SetRecordIdNamePlugin, MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" PluginTypeId="ae752c4b-6d12-4260-a9c6-01888f5e6a51" Name="MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins.Common.SetRecordIdNamePlugin">
       <FriendlyName>fd518e3b-2cda-4ef9-a6de-eab27a24987e</FriendlyName>
     </PluginType>

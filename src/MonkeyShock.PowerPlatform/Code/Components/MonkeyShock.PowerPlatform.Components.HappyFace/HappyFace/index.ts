@@ -11,7 +11,7 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	private notifyOutputChanged: () => void;
 	private xrmClient : XrmClient; 
 
-	private smileImgElement : HTMLImageElement;
+	private smileImgElement : HTMLAnchorElement; 
 	private sadImgElement : HTMLImageElement;
 
 	constructor()
@@ -37,19 +37,21 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 
 		//According to: https://powerusers.microsoft.com/t5/Power-Apps-Pro-Dev-ISV/Is-there-an-example-of-using-Image-Resources-within-PCF-control/td-p/342152
 
-		this.smileImgElement = document.createElement("img");	
+		this.smileImgElement = document.createElement("image") as HTMLAnchorElement;	
 		this.smileImgElement.id = "imgSmile"; 
 		//this.smileImgElement.style.visibility = 'hidden'; 
 		this.context.resources.getResource("Smile128.png", this.setSmileImage.bind(this, false, "png"), this.showError.bind(this));
 		
 		this.sadImgElement = document.createElement("img"); 
-		this.sadImgElement .id = "imgSad"; 
+		this.sadImgElement.id = "imgSad"; 
 		//this.sadImgElement.style.visibility = 'hidden'; 
 		this.context.resources.getResource("Sad128.png", this.setSadImage.bind(this, false, "png"), this.showError.bind(this));
 
 		const imagesContainer = document.createElement("div");
-		imagesContainer.appendChild(this.smileImgElement);
-		imagesContainer.appendChild(this.sadImgElement);
+		const svgContainer = document.createElement("svg");
+		svgContainer.appendChild(this.smileImgElement);
+		imagesContainer.appendChild(svgContainer); 
+		//imagesContainer.appendChild(this.sadImgElement);
 
 		this.container.appendChild(imagesContainer);
 	}
@@ -112,19 +114,15 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 
 	private setSmileImage(shouldUpdateOutput: boolean, fileType: string, fileContent: string): void
 	{
-		console.log("setSmileImage");
 		let imageUrl: string = this.generateImageSrcUrl(fileType, fileContent);
-		this.smileImgElement.src = imageUrl;
-		console.log("setSmileImage: " + this.smileImgElement.src); 
+		this.smileImgElement.href = imageUrl;
 
 	}
 
 	private setSadImage(shouldUpdateOutput: boolean, fileType: string, fileContent: string): void
 	{
-		console.log("setSadImage");
 		let imageUrl: string = this.generateImageSrcUrl(fileType, fileContent);
 		this.sadImgElement.src = imageUrl;
-		console.log("setSadImage: " + this.sadImgElement.src); 
 
 	}
 

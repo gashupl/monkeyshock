@@ -6,6 +6,8 @@ using System;
 using MonkeyShock.PowerPlatform.Dataverse.Plugins.DataAccess;
 using MonkeyShock.PowerPlatform.Dataverse.Plugins.DataAccess.Accounts;
 using MonkeyShock.PowerPlatform.Dataverse.Plugins.DomainServices.Demo;
+using MonkeyShock.PowerPlatform.Dataverse.Plugins.DataAccess.EnvironmentVariables;
+using MonkeyShock.PowerPlatform.Dataverse.Plugins.DomainServices.Environment;
 
 namespace MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins
 {
@@ -15,7 +17,6 @@ namespace MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins
         protected string Name => GetType().FullName;
         protected string UnsecurePluginConfiguration { get; }
         protected string SecurePluginConfiguration { get; }
-
         #endregion
 
         #region Constructor(s)
@@ -36,12 +37,15 @@ namespace MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins
         {
             var repositoriesFactory = new RepositoriesFactory(orgServiceFactory);
             repositoriesFactory.Register<IAccountRepository, AccountRepository>();
+            repositoriesFactory.Register<IEnvVariablesRepository, EnvVariablesRepository>(); 
 
             var servicesFactory = new DomainServicesFactory(repositoriesFactory, tracingService);
             servicesFactory.Register<IDemoService, DemoService>();
+            servicesFactory.Register<IVariablesService, VariablesService>();
 
             return servicesFactory; 
         }
+
         public void Execute(IServiceProvider serviceProvider)
         {
             if (serviceProvider == null) throw new ArgumentNullException(nameof(serviceProvider));
@@ -68,7 +72,7 @@ namespace MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins
                 }
 
                 var servicesFactory = SetRegistrations(serviceFactory, tracingService); 
-                Execute(pluginExecutionContext, servicesFactory);
+                Execute(pluginExecutionContext, servicesFactory, tracingService);
             }
             catch (InvalidPluginExecutionException) { throw; }
             catch (Exception e)
@@ -124,7 +128,7 @@ namespace MonkeyShock.PowerPlatform.Dataverse.Plugins.Plugins
 
         public abstract bool IsContextValid(IPluginExecutionContext pluginExecutionContext);
 
-        public abstract void Execute(IPluginExecutionContext pluginExecutionContext, IDomainServicesFactory servicesFactory);
+        public abstract void Execute(IPluginExecutionContext pluginExecutionContext, IDomainServicesFactory servicesFactory, ITracingService tracingService);
 
         #endregion
     }

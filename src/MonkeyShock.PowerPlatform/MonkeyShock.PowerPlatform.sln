@@ -29,6 +29,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MonkeyShock.PowerPlatform.D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{9FD28CC2-9539-40D6-86F8-2F1FC250AE2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyShock.PowerPlatform.Dataverse.WebResources", "Code\Dataverse\MonkeyShock.PowerPlatform.Dataverse.WebResources\MonkeyShock.PowerPlatform.Dataverse.WebResources.csproj", "{31EA4882-8C36-441D-A07E-948A2E66872F}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Code\Dataverse\MonkeyShock.PowerPlatform.Dataverse.Context\MonkeyShock.PowerPlatform.Dataverse.Context.projitems*{12f8306a-95fc-4704-84a1-fb5e025a1491}*SharedItemsImports = 4
@@ -47,6 +49,10 @@ Global
 		{330F06F7-AC5D-458F-8C94-2E704BF97B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{330F06F7-AC5D-458F-8C94-2E704BF97B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{330F06F7-AC5D-458F-8C94-2E704BF97B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31EA4882-8C36-441D-A07E-948A2E66872F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EA4882-8C36-441D-A07E-948A2E66872F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EA4882-8C36-441D-A07E-948A2E66872F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EA4882-8C36-441D-A07E-948A2E66872F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{1F8E7CFD-B6B0-475D-9468-3D37B312A304} = {3EFBCF8B-9843-40FB-9CAD-796DA8298042}
 		{6401F228-23AC-4A10-B927-A701CF9C7650} = {2CFAE37A-56B5-42AA-8471-48AB8F5DB60E}
 		{9FD28CC2-9539-40D6-86F8-2F1FC250AE2D} = {65BFAEDF-6934-42F7-8393-3330966681B4}
+		{31EA4882-8C36-441D-A07E-948A2E66872F} = {2CFAE37A-56B5-42AA-8471-48AB8F5DB60E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4440BA52-A533-4D9D-9569-B26F19B55DD3}

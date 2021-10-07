@@ -1,0 +1,23 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": [ "ES2015", "DOM" ],
+    "allowJs": true,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "outDir": "pg_",
+    "sourceRoot": "/",
+    "rootDir": "src"
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ],
+  "include": [
+    "src/**/*",
+    "typings/**/*"
+  ]
+}

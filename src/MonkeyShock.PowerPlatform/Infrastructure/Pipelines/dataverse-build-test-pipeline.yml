@@ -11,11 +11,17 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/MonkeyShock.PowerPlatform.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
-  version: '1.0.1.$(Build.BuildId)'
-  pcfVersion: '1.1.$(Build.BuildId)'
+- group: ADDRESSES
+- name: solution
+  value: '**/MonkeyShock.PowerPlatform.sln'
+- name: buildPlatform
+  value: 'Any CPU'
+- name: buildConfiguration
+  value: 'Release'
+- name: version
+  value: '1.0.1.$(Build.BuildId)'
+- name: pcfVersion
+  value: '1.1.$(Build.BuildId)'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -50,7 +56,19 @@ steps:
         $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
 
 - task: PowerShell@2
-  displayName: Update MokneyShockControls solution version 
+  displayName: Update configuration variables
+  inputs:
+    targetType: 'inline'
+    script: |
+        $solutionFullPath = "solutions/MonkeyShock/src/environmentvariabledefinitions/pg_samplesiteurl/environmentvariabledefinition.xml"
+        $solutionXml = New-Object System.Xml.XmlDocument
+        $solutionXml.PreserveWhitespace = $true
+        $solutionXml.Load($solutionFullPath)
+        $solutionXml.SelectSingleNode("/environmentvariabledefinition/defaultvalue").'#text' = '$(sample-site-url)'
+        $solutionXml.OuterXml | Out-File -FilePath $solutionFullPath -Encoding utf8 -NoNewline  
+
+- task: PowerShell@2
+  displayName: Update MonkeyShockControls solution version
   inputs:
     targetType: 'inline'
     script: |

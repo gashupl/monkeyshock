@@ -79,7 +79,7 @@ namespace MonkeyShock.PowerPlatform.Dataverse.Plugins.UnitTests.Plugins.Common
                 (int)ProcessingStage.PreOperation);
 
             var plugin = new SetRecordIdNamePlugin();
-            plugin.Execute(context, null);
+            plugin.Execute(context, null, null);
 
             var target = (Entity)context.InputParameters[ParameterName.Target];
             var pcfTest = target.ToEntity<pg_pcftest>();

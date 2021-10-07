@@ -6,3 +6,7 @@ src/MonkeyShock.PowerPlatform/Tests/Dataverse/MonkeyShock.PowerPlatform.Datavers
 src/MonkeyShock.PowerPlatform/Tests/Dataverse/MonkeyShock.PowerPlatform.Dataverse.Plugins.UnitTests/obj/
 /src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.Context/bin/Release
 /src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.Context/obj/Release
+/src/MonkeyShock.PowerPlatform/.vs/MonkeyShock.PowerPlatform/config
+/src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.WebResources/bin
+/src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.WebResources/obj/Debug
+/src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.WebResources/MonkeyShock.PowerPlatform.Dataverse.WebResources.csproj.user

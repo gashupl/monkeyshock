@@ -38,14 +38,12 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 		this.smileImgElement = document.createElement("img");	
 		this.smileImgElement.id = "imgSmile"; 
 		this.smileImgElement.src = smileImagePath; 
-		//this.smileImgElement.style.visibility = 'hidden'; 
-		//this.context.resources.getResource("Smile128.png", this.setSmileImage.bind(this, false, "png"), this.showError.bind(this));
+		this.smileImgElement.style.visibility = 'hidden'; 
 		
 		this.sadImgElement = document.createElement("img"); 
 		this.sadImgElement.id = "imgSad"; 
 		this.sadImgElement.src = sadImagePath; 
-		//this.sadImgElement.style.visibility = 'hidden'; 
-		//this.context.resources.getResource("Sad128.png", this.setSadImage.bind(this, false, "png"), this.showError.bind(this));
+		this.sadImgElement.style.visibility = 'hidden'; 
 
 		const imagesContainer = document.createElement("div");
 		imagesContainer.appendChild(this.smileImgElement); 
@@ -60,35 +58,7 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	 */
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
-		return; 
-		let smileVisibility = "visible"; 
-		let sadVisibility = "hidden"; 
-
-		this.smileImgElement.style.visibility = smileVisibility; 
-		this.sadImgElement.style.visibility = sadVisibility; 
-
-		this.xrmClient.countOpenTasks(
-			function(result: any){
-				console.log("result exits");
-				let smileVisibility = "visible"; 
-				let sadVisibility = "hidden"; 
-
-				if(result > 2){
-					smileVisibility = "hidden"; 
-					sadVisibility = "visible"; 
-				}
-
-				let smile = document.getElementById("imgSmile"); 
-				if(smile){
-					smile.style.visibility = smileVisibility; 
-				}
-				let sad = document.getElementById("imgSad"); 
-				if(sad){
-					sad.style.visibility = sadVisibility; 
-				}
-			}, 
-			function(result: any){}); 
-
+		this.xrmClient.countOpenTasks(); 
 	}
 
 	/**

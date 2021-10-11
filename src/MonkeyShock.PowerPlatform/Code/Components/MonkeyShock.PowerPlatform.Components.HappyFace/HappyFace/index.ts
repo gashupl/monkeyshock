@@ -10,7 +10,6 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	private container: HTMLDivElement;
 	private notifyOutputChanged: () => void;
 	private xrmClient : XrmClient; 
-	private entityName: string; 
 	private entityId: string; 
 
 	private smileImgElement : HTMLImageElement; 
@@ -34,7 +33,6 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 		console.log("init..."); 
 		this.context = context;
 		this.entityId = context.parameters.Id.raw as string;  
-		this.entityName = context.parameters.EntityName.raw as string; 
 		this.container = container;
 		this.notifyOutputChanged = notifyOutputChanged;
 		this.xrmClient = new XrmClient(); 
@@ -63,7 +61,7 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	 */
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
-		this.xrmClient.countOpenTasks(this.entityName, this.entityId); 
+		this.xrmClient.countOpenTasks(this.entityId); 
 	}
 
 	/**

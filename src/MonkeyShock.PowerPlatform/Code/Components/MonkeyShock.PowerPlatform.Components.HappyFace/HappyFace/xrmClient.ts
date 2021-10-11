@@ -5,12 +5,11 @@ export class XrmClient {
 
     constructor() { }
 
-    countOpenTasks(entityName: string, entityId: string){
+    countOpenTasks(entityId: string){
         return new Promise<any>(() => {
             Xrm.WebApi.retrieveMultipleRecords(
-                //"task", 
+                "task", 
                 //"?$filter=_regardingobjectid_value eq f81a9b22-b6d5-eb11-bacc-000d3aaf68aa and statecode eq 0", 
-                entityName, 
                 "?$filter=_regardingobjectid_value eq " + entityId + " and statecode eq 0", 
                 5).then(
                     function success(result: any){

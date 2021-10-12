@@ -12,6 +12,7 @@
   <AppModuleComponents>
     <AppModuleComponent type="62" schemaName="pg_MonkeyShock" />
     <AppModuleComponent type="1" schemaName="account" />
+    <AppModuleComponent type="1" schemaName="pg_demo" />
     <AppModuleComponent type="1" schemaName="pg_pcftest" />
   </AppModuleComponents>
   <AppModuleRoleMaps>

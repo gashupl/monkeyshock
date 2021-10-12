@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{2bb972ad-0c28-ec11-b6e5-6045bd8b0910}</WebResourceId>
+  <Name>pg_/img/controls/smile.jpg</Name>
+  <DisplayName>pg_/img/controls/smile.jpg</DisplayName>
+  <WebResourceType>5</WebResourceType>
+  <IntroducedVersion>1.0.1.338</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/pg_imgcontrolssmilejpg2BB972AD-0C28-EC11-B6E5-6045BD8B0910</FileName>
+</WebResource>

@@ -46,6 +46,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\..\src\MonkeyShock.PowerPlatform\Code\Components\MonkeyShock.PowerPlatform.Components.DemoComponent\MonkeyShock.PowerPlatform.Components.DemoComponent.pcfproj" />
+    <ProjectReference Include="..\..\src\MonkeyShock.PowerPlatform\Code\Components\MonkeyShock.PowerPlatform.Components.HappyFace\MonkeyShock.PowerPlatform.Components.HappyFace.pcfproj" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />

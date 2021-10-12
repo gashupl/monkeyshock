@@ -5,7 +5,7 @@
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab verticallayout="true" id="{9c43f30b-8ab9-42cc-a5b2-c409990f5987}" IsUserDefined="1">
           <labels>
@@ -20,11 +20,34 @@
                   </labels>
                   <rows>
                     <row>
-                      <cell id="{a0a9767e-868d-4248-84fa-bc2b10c3c739}">
+                      <cell id="{a0a9767e-868d-4248-84fa-bc2b10c3c739}" showlabel="false" locklevel="0">
                         <labels>
                           <label description="Name" languagecode="1033" />
                         </labels>
-                        <control id="pg_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="pg_name" />
+                        <control id="pg_name" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="pg_name" uniqueid="{bd3e019a-aa35-5ae7-e1a4-20e6723d0061}" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="ff179ef9-9ff8-4480-abc7-7367bea645e3" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false">
+                  <labels>
+                    <label description="Hidden" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{562a8f59-1d1b-4219-99a2-cd00e6d0818a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Entity Id" languagecode="1033" />
+                        </labels>
+                        <control id="pg_entityidentifier" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pg_entityidentifier" disabled="false" uniqueid="{00bceaa2-8660-9903-a8c9-437ee6a80184}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e53e04de-8fab-4754-860f-25389570b924}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Entity Name" languagecode="1033" />
+                        </labels>
+                        <control id="pg_entityname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="pg_entityname" disabled="false" />
                       </cell>
                     </row>
                   </rows>
@@ -34,6 +57,114 @@
           </columns>
         </tab>
       </tabs>
+      <header id="{68e152e7-c05b-4350-87e4-17f8b0af69d2}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{655888e2-96f1-4b87-a761-5ec2f6e96cb2}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{52c2d5ae-cf2d-42a6-a5f7-56d96bfff88e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{d5e13ee5-d988-49e4-9cb9-fff20425165b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{64611d98-94a2-4d8a-8aaf-eb918731700f}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{9997f64b-fcfc-4893-9e28-4f7cd8bb309b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{779b20d5-5a30-4a6b-96ec-f83240b46aa5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{79385477-c2db-4eb6-81cd-8aa8f6341948}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions>
+        <controlDescription forControl="{bd3e019a-aa35-5ae7-e1a4-20e6723d0061}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>pg_name</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="pg_MonkeyShock.PowerPlatform.Components.HappyFace">
+            <parameters>
+              <Name>pg_name</Name>
+              <Id>pg_entityidentifier</Id>
+              <EntityName>pg_entityname</EntityName>
+              <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="pg_MonkeyShock.PowerPlatform.Components.HappyFace">
+            <parameters>
+              <Name>pg_name</Name>
+              <Id>pg_entityidentifier</Id>
+              <EntityName>pg_entityname</EntityName>
+              <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="pg_MonkeyShock.PowerPlatform.Components.HappyFace">
+            <parameters>
+              <Name>pg_name</Name>
+              <Id>pg_entityidentifier</Id>
+              <EntityName>pg_entityname</EntityName>
+              <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>

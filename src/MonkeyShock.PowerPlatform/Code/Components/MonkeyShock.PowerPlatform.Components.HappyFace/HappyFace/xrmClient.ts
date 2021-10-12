@@ -5,7 +5,7 @@ export class XrmClient {
 
     constructor() { }
 
-    countOpenTasks(entityId: string){
+    countOpenTasks(entityId: string, smileImagePath: string, sadImagePath: string){
         return new Promise<any>(() => {
             Xrm.WebApi.retrieveMultipleRecords(
                 "task", 
@@ -15,24 +15,15 @@ export class XrmClient {
                     function success(result: any){
                         console.log("success..."); 
                         if(result !== null && result !== undefined && result.entities !== null){
-                            console.log("result exits");
-                            console.log(result.entities.length); 
-                            let smileVisibility = "visible"; 
-                            let sadVisibility = "hidden"; 
-            
+
+                            let smile = document.getElementById("imgSmile")as HTMLImageElement; 
                             if(result.entities.length > 2){
-                                smileVisibility = "hidden"; 
-                                sadVisibility = "visible"; 
+                                smile.src = sadImagePath; 
                             }
-            
-                            let smile = document.getElementById("imgSmile"); 
-                            if(smile){
-                                smile.style.visibility = smileVisibility; 
+                            else{
+                                smile.src = smileImagePath; 
                             }
-                            let sad = document.getElementById("imgSad"); 
-                            if(sad){
-                                sad.style.visibility = sadVisibility; 
-                            }
+        
                         } 
                         else {
                             console.log("Missing results");

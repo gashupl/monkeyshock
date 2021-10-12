@@ -12,8 +12,7 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	private xrmClient : XrmClient; 
 	private entityId: string; 
 
-	private smileImgElement : HTMLImageElement; 
-	private sadImgElement : HTMLImageElement;
+	private imageElement : HTMLImageElement; 
 
 	constructor()
 	{
@@ -37,20 +36,12 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 		this.notifyOutputChanged = notifyOutputChanged;
 		this.xrmClient = new XrmClient(); 
 
-		this.smileImgElement = document.createElement("img");	
-		this.smileImgElement.id = "imgSmile"; 
-		this.smileImgElement.src = smileImagePath; 
-		this.smileImgElement.style.visibility = 'hidden'; 
+		this.imageElement = document.createElement("img");	
+		this.imageElement.id = "imgSmile"; 
+		this.imageElement.src = smileImagePath; 
 		
-		this.sadImgElement = document.createElement("img"); 
-		this.sadImgElement.id = "imgSad"; 
-		this.sadImgElement.src = sadImagePath; 
-		this.sadImgElement.style.visibility = 'hidden'; 
-
 		const imagesContainer = document.createElement("div");
-		imagesContainer.appendChild(this.smileImgElement); 
-		imagesContainer.append("<br>"); 
-		imagesContainer.appendChild(this.sadImgElement);
+		imagesContainer.appendChild(this.imageElement); 
 		this.container.appendChild(imagesContainer);
 	}
 
@@ -61,7 +52,7 @@ export class HappyFace implements ComponentFramework.StandardControl<IInputs, IO
 	 */
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
-		this.xrmClient.countOpenTasks(this.entityId); 
+		this.xrmClient.countOpenTasks(this.entityId, smileImagePath, sadImagePath); 
 	}
 
 	/**

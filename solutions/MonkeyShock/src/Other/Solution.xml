@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.21082.144" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.21092.145" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>MonkeyShock</UniqueName>
     <LocalizedNames>
@@ -82,6 +82,7 @@
     <RootComponents>
       <RootComponent type="1" schemaName="pg_demo" behavior="0" />
       <RootComponent type="1" schemaName="pg_pcftest" behavior="0" />
+      <RootComponent type="60" id="{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}" behavior="0" />
       <RootComponent type="62" schemaName="pg_MonkeyShock" behavior="0" />
       <RootComponent type="80" schemaName="pg_MonkeyShock" behavior="0" />
       <RootComponent type="91" id="{7ca15614-dbc4-406c-811f-faac20b2e75d}" schemaName="MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" behavior="0" />
@@ -92,6 +93,10 @@
       <MissingDependency>
         <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
         <Dependent type="80" schemaName="pg_MonkeyShock" displayName="MonkeyShock" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2109.2007)" />
+        <Dependent type="60" displayName="Classic dashboard with assistant included" id="{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" displayName="pg_MonkeyShock.PowerPlatform.Components.DemoComponent" solution="Active" />

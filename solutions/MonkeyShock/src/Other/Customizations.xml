@@ -9,6 +9,8 @@
   <EntityRelationships />
   <OrganizationSettings />
   <optionsets />
+  <Dashboards />
+  <InteractionCentricDashboards />
   <CustomControls />
   <SolutionPluginAssemblies />
   <SdkMessageProcessingSteps />

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LocalizedNames>
+    <LocalizedName description="Classic dashboard with assistant included" languagecode="1033" />
+  </LocalizedNames>
+  <FormId>{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}</FormId>
+  <IsCustomizable>1</IsCustomizable>
+  <IsDefault>0</IsDefault>
+  <FormXml>
+    <forms type="dashboard">
+      <form>
+        <tabs>
+          <tab showlabel="false" verticallayout="true" id="{5465087b-a3d8-4e9b-9cd4-1ffebb267521}">
+            <labels>
+              <label description="Tab" languagecode="1033" />
+            </labels>
+            <columns>
+              <column width="100%">
+                <sections>
+                  <section showlabel="false" showbar="false" columns="1111" id="{cddb8dc8-e6ae-46e8-b902-adea9d7ab5c0}">
+                    <labels>
+                      <label description="Section" languagecode="1033" />
+                    </labels>
+                    <rows>
+                      <row>
+                        <cell colspan="2" rowspan="12" showlabel="false" id="{458a0958-5e13-44fc-8a08-bfcc1e0abe82}" visible="false">
+                          <labels>
+                            <label description="Assistant" languagecode="1033" />
+                          </labels>
+                          <control id="ActionCards" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{3ff9a528-dd50-4aca-8f10-2e5ed73513ad}" disabled="false">
+                            <parameters>
+                              <ViewId>{92AFD454-0F2E-4397-A1C8-05E37C6AD699}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <RelationshipName />
+                              <TargetEntityType>actioncard</TargetEntityType>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <ChartGridMode>All</ChartGridMode>
+                              <VisualizationId />
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RecordsPerPage>4</RecordsPerPage>
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="2" rowspan="12" showlabel="false" id="{5c8ce5d5-b956-4188-a27e-eacdd834cfb2}" auto="false">
+                          <labels>
+                            <label description="Accounts" languagecode="1033" />
+                          </labels>
+                          <control id="Componentfda98d2" uniqueid="{ce434d8b-b891-caa3-3042-d979d9502389}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>account</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>10</RecordsPerPage>
+                              <HeaderColorCode />
+                              <ViewId>{00000000-0000-0000-00AA-000010001001}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{74A622C0-5193-DE11-97D4-00155DA3B01E}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row>
+                        <cell colspan="2" rowspan="12" showlabel="false" id="{505767d2-7c6e-4b8a-b2a9-77877f0b38e1}" auto="false">
+                          <labels>
+                            <label description="Accounts" languagecode="1033" />
+                          </labels>
+                          <control id="Component573aa4e" uniqueid="{aab6bde7-9b93-ebb9-2b8a-c0a659ca71c9}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>account</TargetEntityType>
+                              <ChartGridMode>Grid</ChartGridMode>
+                              <EnableQuickFind>true</EnableQuickFind>
+                              <EnableViewPicker>true</EnableViewPicker>
+                              <EnableJumpBar>true</EnableJumpBar>
+                              <RecordsPerPage>8</RecordsPerPage>
+                              <HeaderColorCode />
+                              <ViewId>{00000000-0000-0000-00AA-000010001001}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds />
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId />
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="2" rowspan="12" showlabel="false" id="{a16a9700-3362-4442-b2b4-8666c0397468}">
+                          <labels>
+                            <label description="homepage" languagecode="1033" />
+                          </labels>
+                          <control id="IFRAME_homepage" uniqueid="{366a8295-727c-c11c-dd52-57233e75a12a}" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}">
+                            <parameters>
+                              <Url>https://piotrgaszewski.pl</Url>
+                              <PassParameters>false</PassParameters>
+                              <Security>false</Security>
+                              <Scrolling>auto</Scrolling>
+                              <Border>true</Border>
+                              <ShowOnMobileClient>false</ShowOnMobileClient>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+            </columns>
+          </tab>
+        </tabs>
+        <controlDescriptions>
+          <controlDescription forControl="{3ff9a528-dd50-4aca-8f10-2e5ed73513ad}">
+            <customControl formFactor="2" name="MscrmControls.CardFeedContainer.CardFeedContainer">
+              <parameters>
+                <data-set name="SubGrid">
+                  <ViewId>{92AFD454-0F2E-4397-A1C8-05E37C6AD699}</ViewId>
+                  <IsUserView>false</IsUserView>
+                  <TargetEntityType>actioncard</TargetEntityType>
+                  <FilteredViewIds>{92AFD454-0F2E-4397-A1C8-05E37C6AD699}</FilteredViewIds>
+                  <EnableViewPicker>false</EnableViewPicker>
+                </data-set>
+                <Location static="true" type="Decimal">2</Location>
+                <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+              </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.CardFeedContainer.CardFeedContainer">
+              <parameters>
+                <data-set name="SubGrid">
+                  <ViewId>{92AFD454-0F2E-4397-A1C8-05E37C6AD699}</ViewId>
+                  <IsUserView>false</IsUserView>
+                  <TargetEntityType>actioncard</TargetEntityType>
+                  <FilteredViewIds>{92AFD454-0F2E-4397-A1C8-05E37C6AD699}</FilteredViewIds>
+                  <EnableViewPicker>false</EnableViewPicker>
+                </data-set>
+                <Location static="true" type="Decimal">2</Location>
+                <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+              </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.CardFeedContainer.CardFeedContainer">
+              <parameters>
+                <data-set name="SubGrid">
+                  <ViewId>{92AFD454-0F2E-4397-A1C8-05E37C6AD699}</ViewId>
+                  <IsUserView>false</IsUserView>
+                  <TargetEntityType>actioncard</TargetEntityType>
+                  <FilteredViewIds>{92AFD454-0F2E-4397-A1C8-05E37C6AD699}</FilteredViewIds>
+                  <EnableViewPicker>false</EnableViewPicker>
+                </data-set>
+                <Location static="true" type="Decimal">2</Location>
+                <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+              </parameters>
+            </customControl>
+          </controlDescription>
+        </controlDescriptions>
+      </form>
+    </forms>
+  </FormXml>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsTabletEnabled>0</IsTabletEnabled>
+</Dashboard>

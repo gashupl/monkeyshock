@@ -15,6 +15,11 @@
           <Title LCID="1033" Title="Test" />
         </Titles>
         <SubArea Id="NewSubArea_484655c9" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="account" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="NewSubArea_6a8549bc" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="activitypointer" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Activities" />
+          </Titles>
+        </SubArea>
         <SubArea Id="NewSubarea_911720dc" Entity="pg_pcftest" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
         <SubArea Id="NewSubArea_837788d1" Entity="pg_demo" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
       </Group>
@@ -27,9 +32,14 @@
         <Titles>
           <Title LCID="1033" Title="Monkey Dashboards" />
         </Titles>
-        <SubArea Id="NewSubArea_c3e95e1b" ResourceId="Homepage_Dashboards" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="d3447376-2b2c-ec11-b6e5-000d3aaf7a9c" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ToolTipResourseId="Dashboards_ToolTip">
+        <SubArea Id="NewSubArea_c3e95e1b" ResourceId="Homepage_Dashboards" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="d3447376-2b2c-ec11-b6e5-000d3aaf7a9c" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
           <Titles>
             <Title LCID="1033" Title="Classic with assistant" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="NewSubArea_24abf626" ResourceId="Homepage_Dashboards" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="ded6d7d5-e430-ec11-b6e6-6045bd918174" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ToolTipResourseId="Dashboards_ToolTip">
+          <Titles>
+            <Title LCID="1033" Title="Interactive dashboard for tasks" />
           </Titles>
         </SubArea>
       </Group>

@@ -82,8 +82,10 @@
     <RootComponents>
       <RootComponent type="1" schemaName="pg_demo" behavior="0" />
       <RootComponent type="1" schemaName="pg_pcftest" behavior="0" />
+      <RootComponent type="1" schemaName="task" behavior="2" />
       <RootComponent type="60" id="{17794851-1e30-ec11-b6e6-6045bd918174}" />
       <RootComponent type="60" id="{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}" behavior="0" />
+      <RootComponent type="60" id="{ded6d7d5-e430-ec11-b6e6-6045bd918174}" behavior="0" />
       <RootComponent type="62" schemaName="pg_MonkeyShock" behavior="0" />
       <RootComponent type="80" schemaName="pg_MonkeyShock" behavior="0" />
       <RootComponent type="91" id="{7ca15614-dbc4-406c-811f-faac20b2e75d}" schemaName="MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" behavior="0" />
@@ -91,6 +93,22 @@
       <RootComponent type="92" id="{94ff53f2-0fd8-eb11-bacb-0022487fd291}" behavior="0" />
     </RootComponents>
     <MissingDependencies>
+      <MissingDependency>
+        <Required type="59" schemaName="Tasks by Priority - Doughnut Chart" displayName="Tasks by Priority - Doughnut Chart" parentSchemaName="task" parentDisplayName="Task" solution="msdynce_AppCommon (9.0.4.0066)" id="{5dfc4701-ceee-4672-9c1b-da7912027090}">
+          <package>msdynce_AppCommonAnchor (9.0.21041.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Interactive dashboard for tasks" id="{ded6d7d5-e430-ec11-b6e6-6045bd918174}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="59" schemaName="Tasks by Owner - Tag Chart " displayName="Tasks by Owner - Tag Chart " parentSchemaName="task" parentDisplayName="Task" solution="msdynce_AppCommon (9.0.4.0066)" id="{639b2193-2a86-4510-a966-8a118c0c0699}">
+          <package>msdynce_AppCommonAnchor (9.0.21041.10002)</package>
+        </Required>
+        <Dependent type="60" displayName="Interactive dashboard for tasks" id="{ded6d7d5-e430-ec11-b6e6-6045bd918174}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Task" parentDisplayName="Task" solution="msdynce_Activities (9.0.1.2033)" id="{16654191-19ad-48ca-9e46-c4b4fbdad76f}" />
+        <Dependent type="60" displayName="Task" parentDisplayName="Task" id="{16654191-19ad-48ca-9e46-c4b4fbdad76f}" />
+      </MissingDependency>
       <MissingDependency>
         <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
         <Dependent type="80" schemaName="pg_MonkeyShock" displayName="MonkeyShock" />

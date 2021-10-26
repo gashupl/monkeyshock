@@ -17,6 +17,7 @@
   <AppModuleSiteMaps />
   <AppModules />
   <EntityDataProviders />
+  <CanvasApps />
   <connectionreferences>
     <connectionreference connectionreferencelogicalname="slv_sharedcommondataserviceforapps_cd70e">
       <connectionreferencedisplayname>Microsoft Dataverse</connectionreferencedisplayname>

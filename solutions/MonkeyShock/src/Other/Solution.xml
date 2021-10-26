@@ -93,6 +93,7 @@
       <RootComponent type="91" id="{7ca15614-dbc4-406c-811f-faac20b2e75d}" schemaName="MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" behavior="0" />
       <RootComponent type="92" id="{14bc902a-6411-ec11-b6e6-6045bd872874}" behavior="0" />
       <RootComponent type="92" id="{94ff53f2-0fd8-eb11-bacb-0022487fd291}" behavior="0" />
+      <RootComponent type="300" schemaName="pg_demoapp_09b73" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>

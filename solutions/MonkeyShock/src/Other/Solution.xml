@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.21093.147" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.21094.138" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>MonkeyShock</UniqueName>
     <LocalizedNames>
@@ -83,6 +83,7 @@
       <RootComponent type="1" schemaName="pg_demo" behavior="0" />
       <RootComponent type="1" schemaName="pg_pcftest" behavior="0" />
       <RootComponent type="1" schemaName="task" behavior="2" />
+      <RootComponent type="29" id="{8c8453bb-9d35-ec11-8c64-6045bd8aa3d0}" behavior="0" />
       <RootComponent type="29" id="{ae96f24f-9a35-ec11-8c64-6045bd8aa3d0}" behavior="0" />
       <RootComponent type="60" id="{17794851-1e30-ec11-b6e6-6045bd918174}" />
       <RootComponent type="60" id="{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}" behavior="0" />
@@ -94,6 +95,10 @@
       <RootComponent type="92" id="{94ff53f2-0fd8-eb11-bacb-0022487fd291}" behavior="0" />
     </RootComponents>
     <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="appnotification" displayName="Notification" solution="AppNotifications (10.0.0.1)" />
+        <Dependent type="29" displayName="Account - send notification when changed" id="{8c8453bb-9d35-ec11-8c64-6045bd8aa3d0}" />
+      </MissingDependency>
       <MissingDependency>
         <Required type="59" schemaName="Tasks by Priority - Doughnut Chart" displayName="Tasks by Priority - Doughnut Chart" parentSchemaName="task" parentDisplayName="Task" solution="msdynce_AppCommon (9.0.4.0066)" id="{5dfc4701-ceee-4672-9c1b-da7912027090}">
           <package>msdynce_AppCommonAnchor (9.0.21041.10002)</package>
@@ -115,7 +120,7 @@
         <Dependent type="80" schemaName="pg_MonkeyShock" displayName="MonkeyShock" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2109.3020)" />
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2109.4014)" />
         <Dependent type="60" displayName="Classic dashboard with assistant included" id="{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}" />
       </MissingDependency>
       <MissingDependency>

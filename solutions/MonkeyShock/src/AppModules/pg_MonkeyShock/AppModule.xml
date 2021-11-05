@@ -35,6 +35,13 @@
       <iscustomizable>1</iscustomizable>
       <name>pg_pg_MonkeyShock_canvasappid_pg_canvascustompage_9c322</name>
     </appelement>
+    <appelement uniquename="pg_pg_MonkeyShock_canvasappid_pg_monkeyshockdefaultcommandlibrary_4bba2">
+      <canvasappid>
+        <name>pg_monkeyshockdefaultcommandlibrary_4bba2</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>pg_pg_MonkeyShock_canvasappid_pg_monkeyshockdefaultcommandlibrary_4bba2</name>
+    </appelement>
   </appelements>
   <appsettings>
     <appsetting uniquename="new_pg_MonkeyShock_AllowNotificationsEarlyAccess">

@@ -22,6 +22,11 @@
         </SubArea>
         <SubArea Id="NewSubarea_911720dc" Entity="pg_pcftest" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
         <SubArea Id="NewSubArea_837788d1" Entity="pg_demo" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="NewSubarea_d0d2ed0c" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="pg_canvascustompage_9c322">
+          <Titles>
+            <Title LCID="1033" Title="Canvas Custom Page" />
+          </Titles>
+        </SubArea>
       </Group>
     </Area>
     <Area Id="NewArea_9f88025" ResourceId="SitemapDesigner.NewArea" ShowGroups="false">

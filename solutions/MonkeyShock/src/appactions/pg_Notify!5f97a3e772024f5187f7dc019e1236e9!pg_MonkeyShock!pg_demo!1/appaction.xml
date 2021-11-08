@@ -1,0 +1,29 @@
+<appaction uniquename="pg_Notify!5f97a3e772024f5187f7dc019e1236e9!pg_MonkeyShock!pg_demo!1">
+  <appmoduleid>
+    <uniquename>pg_MonkeyShock</uniquename>
+  </appmoduleid>
+  <buttonlabeltext default="Notify">
+    <label description="Notify" languagecode="1033" />
+  </buttonlabeltext>
+  <buttonsequencepriority>10.0000000000</buttonsequencepriority>
+  <context>1</context>
+  <contextentity>
+    <logicalname>pg_demo</logicalname>
+  </contextentity>
+  <contextvalue>pg_demo</contextvalue>
+  <fonticon>NotificationIcon</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <location>1</location>
+  <name>Notify!5f97a3e772024f5187f7dc019e1236e9</name>
+  <onclickeventformulacomponentlibrary>a7977d49-7720-4661-b8e0-d762da53c136</onclickeventformulacomponentlibrary>
+  <onclickeventformulacomponentlibraryid>
+    <name>pg_monkeyshockdefaultcommandlibrary_4bba2</name>
+  </onclickeventformulacomponentlibraryid>
+  <onclickeventformulacomponentname>853b5a8239804ccd99999d76d97e7ca4</onclickeventformulacomponentname>
+  <onclickeventformulafunctionname>OnSelect</onclickeventformulafunctionname>
+  <onclickeventtype>1</onclickeventtype>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+</appaction>

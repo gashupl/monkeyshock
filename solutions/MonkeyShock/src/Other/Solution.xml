@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.21094.138" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.21101.141" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>MonkeyShock</UniqueName>
     <LocalizedNames>
@@ -93,7 +93,9 @@
       <RootComponent type="91" id="{7ca15614-dbc4-406c-811f-faac20b2e75d}" schemaName="MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" behavior="0" />
       <RootComponent type="92" id="{14bc902a-6411-ec11-b6e6-6045bd872874}" behavior="0" />
       <RootComponent type="92" id="{94ff53f2-0fd8-eb11-bacb-0022487fd291}" behavior="0" />
+      <RootComponent type="300" schemaName="pg_canvascustompage_9c322" behavior="0" />
       <RootComponent type="300" schemaName="pg_demoapp_09b73" behavior="0" />
+      <RootComponent type="300" schemaName="pg_monkeyshockdefaultcommandlibrary_4bba2" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
@@ -121,7 +123,7 @@
         <Dependent type="80" schemaName="pg_MonkeyShock" displayName="MonkeyShock" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2109.4014)" />
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2110.1016)" />
         <Dependent type="60" displayName="Classic dashboard with assistant included" id="{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}" />
       </MissingDependency>
       <MissingDependency>
@@ -131,6 +133,10 @@
       <MissingDependency>
         <Required type="66" schemaName="pg_MonkeyShock.PowerPlatform.Components.HappyFace" displayName="pg_MonkeyShock.PowerPlatform.Components.HappyFace" solution="Active" />
         <Dependent type="60" displayName="Information" parentDisplayName="Demo" id="{a12dee1c-b33a-4fc5-a150-d393a4bc2640}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AllowNotificationsEarlyAccess" solution="AppNotifications (10.0.0.1)" id.uniquename="AllowNotificationsEarlyAccess" />
+        <Dependent type="AppSetting" displayName="new_pg_MonkeyShock_AllowNotificationsEarlyAccess" id.uniquename="new_pg_MonkeyShock_AllowNotificationsEarlyAccess" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>

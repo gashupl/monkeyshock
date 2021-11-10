@@ -11,3 +11,6 @@ src/MonkeyShock.PowerPlatform/Tests/Dataverse/MonkeyShock.PowerPlatform.Datavers
 /src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.WebResources/obj/Debug
 /src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.WebResources/MonkeyShock.PowerPlatform.Dataverse.WebResources.csproj.user
 /src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.WebResources/pg_/scripts/forms
+/src/MonkeyShock.PowerPlatform/.vs/MonkeyShock.PowerPlatform/v17
+/src/MonkeyShock.PowerPlatform/Infrastructure/Azure/MonkeyShock.Azure.ResourceGroup/obj/Debug
+/src/MonkeyShock.PowerPlatform/Infrastructure/Azure/MonkeyShock.Azure.ResourceGroup/bin/Debug/staging/MonkeyShock.Azure.ResourceGroup

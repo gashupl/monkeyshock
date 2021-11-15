@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "hostingPlanName": {
-      "value": "basic"
+      "value": "MonkeyAppPlan"
     },
     "administratorLogin": {
       "value": "donkeykong"
     },
     "databaseName": {
-      "value": "hellodb"
+      "value": "monkeyshock"
     }
   }
 }

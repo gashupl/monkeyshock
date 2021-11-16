@@ -17,3 +17,6 @@ src/MonkeyShock.PowerPlatform/Tests/Dataverse/MonkeyShock.PowerPlatform.Datavers
 /src/MonkeyShock.PowerPlatform/.vs/MonkeyShock.PowerPlatform
 /src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.Database/obj/Debug
 /src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.Database/MonkeyShock.Azure.Database.sqlproj.user
+/src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.Database/bin/Debug
+/src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.Database/MonkeyShock.Azure.Database.dbmdl
+/src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.Database/MonkeyShock.Azure.Database.jfm

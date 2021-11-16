@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dataverse", "Dataverse", "{2CFAE37A-56B5-42AA-8471-48AB8F5DB60E}"
 EndProject
@@ -31,6 +31,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyShock.PowerPlatform.Dataverse.WebResources", "Code\Dataverse\MonkeyShock.PowerPlatform.Dataverse.WebResources\MonkeyShock.PowerPlatform.Dataverse.WebResources.csproj", "{31EA4882-8C36-441D-A07E-948A2E66872F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{F3027291-90E8-494D-92BD-A3D7FA67D59B}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "MonkeyShock.Azure.ResourceGroup", "Infrastructure\Azure\MonkeyShock.Azure.ResourceGroup\MonkeyShock.Azure.ResourceGroup.deployproj", "{5F8E0844-7B94-4E29-8DC4-EDBC06CEDE75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{861973FE-73A2-4627-A076-16CB6A35FA65}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MonkeyShock.Azure.Database", "Code\Azure\MonkeyShock.Azure.Database\MonkeyShock.Azure.Database.sqlproj", "{89033076-0799-4C77-B0DD-9F392651D082}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Code\Dataverse\MonkeyShock.PowerPlatform.Dataverse.Context\MonkeyShock.PowerPlatform.Dataverse.Context.projitems*{12f8306a-95fc-4704-84a1-fb5e025a1491}*SharedItemsImports = 4
@@ -53,6 +61,16 @@ Global
 		{31EA4882-8C36-441D-A07E-948A2E66872F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31EA4882-8C36-441D-A07E-948A2E66872F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31EA4882-8C36-441D-A07E-948A2E66872F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F8E0844-7B94-4E29-8DC4-EDBC06CEDE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F8E0844-7B94-4E29-8DC4-EDBC06CEDE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F8E0844-7B94-4E29-8DC4-EDBC06CEDE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F8E0844-7B94-4E29-8DC4-EDBC06CEDE75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89033076-0799-4C77-B0DD-9F392651D082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89033076-0799-4C77-B0DD-9F392651D082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89033076-0799-4C77-B0DD-9F392651D082}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{89033076-0799-4C77-B0DD-9F392651D082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89033076-0799-4C77-B0DD-9F392651D082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89033076-0799-4C77-B0DD-9F392651D082}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +84,10 @@ Global
 		{6401F228-23AC-4A10-B927-A701CF9C7650} = {2CFAE37A-56B5-42AA-8471-48AB8F5DB60E}
 		{9FD28CC2-9539-40D6-86F8-2F1FC250AE2D} = {65BFAEDF-6934-42F7-8393-3330966681B4}
 		{31EA4882-8C36-441D-A07E-948A2E66872F} = {2CFAE37A-56B5-42AA-8471-48AB8F5DB60E}
+		{F3027291-90E8-494D-92BD-A3D7FA67D59B} = {3EFBCF8B-9843-40FB-9CAD-796DA8298042}
+		{5F8E0844-7B94-4E29-8DC4-EDBC06CEDE75} = {F3027291-90E8-494D-92BD-A3D7FA67D59B}
+		{861973FE-73A2-4627-A076-16CB6A35FA65} = {65BFAEDF-6934-42F7-8393-3330966681B4}
+		{89033076-0799-4C77-B0DD-9F392651D082} = {861973FE-73A2-4627-A076-16CB6A35FA65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4440BA52-A533-4D9D-9569-B26F19B55DD3}

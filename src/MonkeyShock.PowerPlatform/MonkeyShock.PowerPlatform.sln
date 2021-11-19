@@ -39,7 +39,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure", "Azure", "{861973FE
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MonkeyShock.Azure.Database", "Code\Azure\MonkeyShock.Azure.Database\MonkeyShock.Azure.Database.sqlproj", "{89033076-0799-4C77-B0DD-9F392651D082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonkeyShock.Azure.WebApi", "Code\Azure\MonkeyShock.Azure.WebApi\MonkeyShock.Azure.WebApi.csproj", "{F6944AF3-8029-4C04-B2C2-453D02DAD510}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonkeyShock.Azure.WebApi", "Code\Azure\MonkeyShock.Azure.WebApi\MonkeyShock.Azure.WebApi.csproj", "{F6944AF3-8029-4C04-B2C2-453D02DAD510}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -94,7 +94,7 @@ Global
 		{5F8E0844-7B94-4E29-8DC4-EDBC06CEDE75} = {F3027291-90E8-494D-92BD-A3D7FA67D59B}
 		{861973FE-73A2-4627-A076-16CB6A35FA65} = {65BFAEDF-6934-42F7-8393-3330966681B4}
 		{89033076-0799-4C77-B0DD-9F392651D082} = {861973FE-73A2-4627-A076-16CB6A35FA65}
-		{F6944AF3-8029-4C04-B2C2-453D02DAD510} = {F3027291-90E8-494D-92BD-A3D7FA67D59B}
+		{F6944AF3-8029-4C04-B2C2-453D02DAD510} = {861973FE-73A2-4627-A076-16CB6A35FA65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4440BA52-A533-4D9D-9569-B26F19B55DD3}

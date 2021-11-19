@@ -8,7 +8,7 @@ trigger:
 name: '$(Build.SourceBranchName).$(Build.BuildId)'
 
 pool:
-  vmImage: 'windows-2022'
+  vmImage: 'windows-latest'
 
 variables:
 - group: ADDRESSES
@@ -116,12 +116,12 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-# - task: VSTest@2
-#   displayName: Run unit tests
-#   inputs:
-#     platform: '$(buildPlatform)'
-#     codeCoverageEnabled: true
-#     resultsFolder: '$(Build.SourcesDirectory)/src/TestResults'
+- task: VSTest@2
+  displayName: Run unit tests
+  inputs:
+    platform: '$(buildPlatform)'
+    codeCoverageEnabled: true
+    resultsFolder: '$(Build.SourcesDirectory)/src/TestResults'
 
 - task: MSCRMPackSolution@12
   displayName: Build dataverse Monkeyshock solution

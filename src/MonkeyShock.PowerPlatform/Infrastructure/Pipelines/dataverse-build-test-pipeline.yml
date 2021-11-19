@@ -8,7 +8,7 @@ trigger:
 name: '$(Build.SourceBranchName).$(Build.BuildId)'
 
 pool:
-  vmImage: 'windows-2022'
+  vmImage: 'windows-latest'
 
 variables:
 - group: ADDRESSES
@@ -26,6 +26,13 @@ variables:
 steps:
 - task: NuGetToolInstaller@1
   displayName: Install Nuget 
+
+- task: UseDotNet@2
+  displayName: 'Use .NET 6'
+  inputs:
+    packageType: 'sdk'
+    version: '6.0.x'
+    includePreviewVersions: true
 
 - task: NuGetCommand@2
   displayName: Restore nugets for solution

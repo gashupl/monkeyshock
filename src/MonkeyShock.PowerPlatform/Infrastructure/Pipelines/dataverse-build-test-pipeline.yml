@@ -8,7 +8,7 @@ trigger:
 name: '$(Build.SourceBranchName).$(Build.BuildId)'
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-2022'
 
 variables:
 - group: ADDRESSES

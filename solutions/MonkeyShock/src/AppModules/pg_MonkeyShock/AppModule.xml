@@ -10,15 +10,16 @@
   <ClientType>4</ClientType>
   <NavigationType>0</NavigationType>
   <AppModuleComponents>
+    <AppModuleComponent type="62" schemaName="pg_MonkeyShock" />
+    <AppModuleComponent type="60" id="{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}" />
+    <AppModuleComponent type="60" id="{ded6d7d5-e430-ec11-b6e6-6045bd918174}" />
     <AppModuleComponent type="1" schemaName="account" />
     <AppModuleComponent type="1" schemaName="actioncard" />
     <AppModuleComponent type="26" id="{92afd454-0f2e-4397-a1c8-05e37c6ad699}" />
+    <AppModuleComponent type="1" schemaName="pg_country" />
     <AppModuleComponent type="1" schemaName="pg_demo" />
     <AppModuleComponent type="1" schemaName="pg_pcftest" />
     <AppModuleComponent type="1" schemaName="task" />
-    <AppModuleComponent type="60" id="{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}" />
-    <AppModuleComponent type="60" id="{ded6d7d5-e430-ec11-b6e6-6045bd918174}" />
-    <AppModuleComponent type="62" schemaName="pg_MonkeyShock" />
   </AppModuleComponents>
   <AppModuleRoleMaps>
     <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />

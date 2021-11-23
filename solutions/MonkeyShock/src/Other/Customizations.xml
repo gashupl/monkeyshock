@@ -17,6 +17,7 @@
   <AppModuleSiteMaps />
   <AppModules />
   <EntityDataProviders />
+  <EntityDataSources />
   <CanvasApps />
   <connectionreferences>
     <connectionreference connectionreferencelogicalname="slv_sharedcommondataserviceforapps_cd70e">

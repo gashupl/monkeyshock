@@ -94,7 +94,7 @@
       <RootComponent type="91" id="{7ca15614-dbc4-406c-811f-faac20b2e75d}" schemaName="MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" behavior="0" />
       <RootComponent type="92" id="{14bc902a-6411-ec11-b6e6-6045bd872874}" behavior="0" />
       <RootComponent type="92" id="{94ff53f2-0fd8-eb11-bacb-0022487fd291}" behavior="0" />
-      <RootComponent type="183" id="{4c01b5b4-694c-ec11-8c62-002248811329}" schemaName="Country Sample OData Data Source" behavior="0" />
+      <RootComponent type="183" id="{4c01b5b4-694c-ec11-8c62-002248811329}" schemaName="MonkeyShock Sample OData Data Source" behavior="0" />
       <RootComponent type="300" schemaName="pg_canvascustompage_9c322" behavior="0" />
       <RootComponent type="300" schemaName="pg_demoapp_09b73" behavior="0" />
       <RootComponent type="300" schemaName="pg_monkeyshockdefaultcommandlibrary_4bba2" behavior="0" />
@@ -110,7 +110,7 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="181" schemaName="OData v4 Data Provider" displayName="OData v4 Data Provider" solution="ODatav4DataProvider (9.0.0.384)" id="{a17be158-e9dd-e611-80d3-00155da29216}" />
-        <Dependent type="183" schemaName="Country Sample OData Data Source" displayName="Country Sample OData Data Source" id="{4c01b5b4-694c-ec11-8c62-002248811329}" />
+        <Dependent type="183" schemaName="MonkeyShock Sample OData Data Source" displayName="MonkeyShock Sample OData Data Source" id="{4c01b5b4-694c-ec11-8c62-002248811329}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="59" schemaName="Tasks by Priority - Doughnut Chart" displayName="Tasks by Priority - Doughnut Chart" parentSchemaName="task" parentDisplayName="Task" solution="msdynce_AppCommon (9.0.4.0066)" id="{5dfc4701-ceee-4672-9c1b-da7912027090}">

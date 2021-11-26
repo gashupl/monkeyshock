@@ -20,8 +20,10 @@
             <Title LCID="1033" Title="Activities" />
           </Titles>
         </SubArea>
-        <SubArea Id="NewSubarea_911720dc" Entity="pg_pcftest" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
-        <SubArea Id="NewSubArea_837788d1" Entity="pg_demo" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="NewSubarea_911720dc" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="pg_pcftest" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="NewSubArea_837788d1" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="pg_demo" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="SubArea_Cities" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="pg_city" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="SubArea_Countries" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="pg_country" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
         <SubArea Id="NewSubarea_d0d2ed0c" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="pg_canvascustompage_9c322">
           <Titles>
             <Title LCID="1033" Title="Canvas Custom Page" />
@@ -42,11 +44,12 @@
             <Title LCID="1033" Title="Classic with assistant" />
           </Titles>
         </SubArea>
-        <SubArea Id="NewSubArea_24abf626" ResourceId="Homepage_Dashboards" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="ded6d7d5-e430-ec11-b6e6-6045bd918174" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ToolTipResourseId="Dashboards_ToolTip">
+        <SubArea Id="NewSubArea_24abf626" ResourceId="Homepage_Dashboards" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="ded6d7d5-e430-ec11-b6e6-6045bd918174" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
           <Titles>
             <Title LCID="1033" Title="Interactive dashboard for tasks" />
           </Titles>
         </SubArea>
+        <SubArea Id="SubArea_Countries" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="pg_country" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
       </Group>
     </Area>
   </SiteMap>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.21101.141" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.21104.140" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>MonkeyShock</UniqueName>
     <LocalizedNames>
@@ -80,6 +80,8 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="1" schemaName="pg_city" behavior="0" />
+      <RootComponent type="1" schemaName="pg_country" behavior="0" />
       <RootComponent type="1" schemaName="pg_demo" behavior="0" />
       <RootComponent type="1" schemaName="pg_pcftest" behavior="0" />
       <RootComponent type="1" schemaName="task" behavior="2" />
@@ -93,6 +95,7 @@
       <RootComponent type="91" id="{7ca15614-dbc4-406c-811f-faac20b2e75d}" schemaName="MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" behavior="0" />
       <RootComponent type="92" id="{14bc902a-6411-ec11-b6e6-6045bd872874}" behavior="0" />
       <RootComponent type="92" id="{94ff53f2-0fd8-eb11-bacb-0022487fd291}" behavior="0" />
+      <RootComponent type="183" id="{4c01b5b4-694c-ec11-8c62-002248811329}" schemaName="MonkeyShock Sample OData Data Source" behavior="0" />
       <RootComponent type="300" schemaName="pg_canvascustompage_9c322" behavior="0" />
       <RootComponent type="300" schemaName="pg_demoapp_09b73" behavior="0" />
       <RootComponent type="300" schemaName="pg_monkeyshockdefaultcommandlibrary_4bba2" behavior="0" />
@@ -103,14 +106,26 @@
         <Dependent type="29" displayName="Account - send notification when changed" id="{8c8453bb-9d35-ec11-8c64-6045bd8aa3d0}" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="181" schemaName="OData v4 Data Provider" displayName="OData v4 Data Provider" solution="ODatav4DataProvider (9.0.0.384)" id="{a17be158-e9dd-e611-80d3-00155da29216}" />
+        <Dependent type="1" schemaName="pg_city" displayName="City" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="181" schemaName="OData v4 Data Provider" displayName="OData v4 Data Provider" solution="ODatav4DataProvider (9.0.0.384)" id="{a17be158-e9dd-e611-80d3-00155da29216}" />
+        <Dependent type="1" schemaName="pg_country" displayName="Country" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="181" schemaName="OData v4 Data Provider" displayName="OData v4 Data Provider" solution="ODatav4DataProvider (9.0.0.384)" id="{a17be158-e9dd-e611-80d3-00155da29216}" />
+        <Dependent type="183" schemaName="MonkeyShock Sample OData Data Source" displayName="MonkeyShock Sample OData Data Source" id="{4c01b5b4-694c-ec11-8c62-002248811329}" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="59" schemaName="Tasks by Priority - Doughnut Chart" displayName="Tasks by Priority - Doughnut Chart" parentSchemaName="task" parentDisplayName="Task" solution="msdynce_AppCommon (9.0.4.0066)" id="{5dfc4701-ceee-4672-9c1b-da7912027090}">
-          <package>msdynce_AppCommonAnchor (9.0.21041.10002)</package>
+          <package>msdynce_AppCommonAnchor (9.0.21103.10001)</package>
         </Required>
         <Dependent type="60" displayName="Interactive dashboard for tasks" id="{ded6d7d5-e430-ec11-b6e6-6045bd918174}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="59" schemaName="Tasks by Owner - Tag Chart " displayName="Tasks by Owner - Tag Chart " parentSchemaName="task" parentDisplayName="Task" solution="msdynce_AppCommon (9.0.4.0066)" id="{639b2193-2a86-4510-a966-8a118c0c0699}">
-          <package>msdynce_AppCommonAnchor (9.0.21041.10002)</package>
+          <package>msdynce_AppCommonAnchor (9.0.21103.10001)</package>
         </Required>
         <Dependent type="60" displayName="Interactive dashboard for tasks" id="{ded6d7d5-e430-ec11-b6e6-6045bd918174}" />
       </MissingDependency>
@@ -123,7 +138,7 @@
         <Dependent type="80" schemaName="pg_MonkeyShock" displayName="MonkeyShock" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2110.1016)" />
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2110.4017)" />
         <Dependent type="60" displayName="Classic dashboard with assistant included" id="{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}" />
       </MissingDependency>
       <MissingDependency>

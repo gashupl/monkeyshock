@@ -80,6 +80,7 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="1" schemaName="pg_city" behavior="0" />
       <RootComponent type="1" schemaName="pg_country" behavior="0" />
       <RootComponent type="1" schemaName="pg_demo" behavior="0" />
       <RootComponent type="1" schemaName="pg_pcftest" behavior="0" />
@@ -103,6 +104,10 @@
       <MissingDependency>
         <Required type="1" schemaName="appnotification" displayName="Notification" solution="AppNotifications (10.0.0.1)" />
         <Dependent type="29" displayName="Account - send notification when changed" id="{8c8453bb-9d35-ec11-8c64-6045bd8aa3d0}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="181" schemaName="OData v4 Data Provider" displayName="OData v4 Data Provider" solution="ODatav4DataProvider (9.0.0.384)" id="{a17be158-e9dd-e611-80d3-00155da29216}" />
+        <Dependent type="1" schemaName="pg_city" displayName="City" />
       </MissingDependency>
       <MissingDependency>
         <Required type="181" schemaName="OData v4 Data Provider" displayName="OData v4 Data Provider" solution="ODatav4DataProvider (9.0.0.384)" id="{a17be158-e9dd-e611-80d3-00155da29216}" />

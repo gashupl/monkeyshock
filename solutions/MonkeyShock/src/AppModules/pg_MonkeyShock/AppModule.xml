@@ -16,6 +16,7 @@
     <AppModuleComponent type="1" schemaName="account" />
     <AppModuleComponent type="1" schemaName="actioncard" />
     <AppModuleComponent type="26" id="{92afd454-0f2e-4397-a1c8-05e37c6ad699}" />
+    <AppModuleComponent type="1" schemaName="pg_city" />
     <AppModuleComponent type="1" schemaName="pg_country" />
     <AppModuleComponent type="1" schemaName="pg_demo" />
     <AppModuleComponent type="1" schemaName="pg_pcftest" />

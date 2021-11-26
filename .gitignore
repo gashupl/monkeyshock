@@ -20,3 +20,6 @@ src/MonkeyShock.PowerPlatform/Tests/Dataverse/MonkeyShock.PowerPlatform.Datavers
 /src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.Database/bin/Debug
 /src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.Database/MonkeyShock.Azure.Database.dbmdl
 /src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.Database/MonkeyShock.Azure.Database.jfm
+/src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.WebApi/bin/Debug/net6.0
+/src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.WebApi/obj
+/src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.WebApi/appsettings.Development.json

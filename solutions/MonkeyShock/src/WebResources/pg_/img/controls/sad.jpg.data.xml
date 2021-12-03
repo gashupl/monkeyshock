@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{1045a4a8-2654-ec11-8c62-002248811caf}</WebResourceId>
+  <Name>pg_/img/controls/sad.jpg</Name>
+  <DisplayName>pg_/img/controls/sad.jpg</DisplayName>
+  <WebResourceType>6</WebResourceType>
+  <IntroducedVersion>1.0.1.405</IntroducedVersion>
+  <IsEnabledForMobileClient>1</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/pg_imgcontrolssadjpg1045A4A8-2654-EC11-8C62-002248811CAF</FileName>
+</WebResource>

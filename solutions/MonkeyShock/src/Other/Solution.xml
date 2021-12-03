@@ -90,8 +90,6 @@
       <RootComponent type="60" id="{17794851-1e30-ec11-b6e6-6045bd918174}" />
       <RootComponent type="60" id="{d3447376-2b2c-ec11-b6e5-000d3aaf7a9c}" behavior="0" />
       <RootComponent type="60" id="{ded6d7d5-e430-ec11-b6e6-6045bd918174}" behavior="0" />
-	  <RootComponent type="61" schemaName="pg_/img/controls/sad.jpg" behavior="0" />
-	  <RootComponent type="61" schemaName="pg_/img/controls/smile.jpg" behavior="0" />
       <RootComponent type="62" schemaName="pg_MonkeyShock" behavior="0" />
       <RootComponent type="80" schemaName="pg_MonkeyShock" behavior="0" />
       <RootComponent type="91" id="{7ca15614-dbc4-406c-811f-faac20b2e75d}" schemaName="MonkeyShock.PowerPlatform.Dataverse.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a927e03d8c5ad42b" behavior="0" />

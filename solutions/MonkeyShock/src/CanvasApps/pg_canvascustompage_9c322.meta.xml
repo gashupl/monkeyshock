@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>pg_canvascustompage_9c322</Name>
-  <AppVersion>2021-11-02T15:24:34Z</AppVersion>
+  <AppVersion>2021-12-03T10:46:17Z</AppVersion>
   <Status>Ready</Status>
   <CreatedByClientVersion>3.21103.27.0</CreatedByClientVersion>
   <MinClientVersion>3.21103.27.0</MinClientVersion>
@@ -9,22 +9,18 @@
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
-  <DisplayName>Canvas Custom Page</DisplayName>
-  <Description xsi:nil="true"></Description>
-  <CommitMessage xsi:nil="true"></CommitMessage>
-  <Publisher xsi:nil="true"></Publisher>
+  <DisplayName>Canvas Custom Page_202112031046</DisplayName>
+  <Description></Description>
+  <CommitMessage></CommitMessage>
+  <Publisher></Publisher>
   <AuthorizationReferences>[]</AuthorizationReferences>
   <ConnectionReferences>{}</ConnectionReferences>
   <DatabaseReferences>{}</DatabaseReferences>
-  <AppComponents>[]</AppComponents>
-  <AppComponentDependencies>[]</AppComponentDependencies>
-  <CanConsumeAppPass>1</CanConsumeAppPass>
   <CanvasAppType>2</CanvasAppType>
   <BypassConsent>0</BypassConsent>
-  <AdminControlBypassConsent>0</AdminControlBypassConsent>
   <EmbeddedApp xsi:nil="true"></EmbeddedApp>
   <IntroducedVersion>1.0</IntroducedVersion>
-  <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+  <CdsDependencies xsi:nil="true"></CdsDependencies>
   <IsCustomizable>1</IsCustomizable>
   <BackgroundImageUri>/CanvasApps/pg_canvascustompage_9c322_BackgroundImageUri</BackgroundImageUri>
   <DocumentUri>/CanvasApps/pg_canvascustompage_9c322_DocumentUri.msapp</DocumentUri>

@@ -89,8 +89,6 @@
       </Addresses>
     </Publisher>
     <RootComponents >
-	      <RootComponent type="61" schemaName="pg_/img/controls/sad.jpg" behavior="0" />
-		  <RootComponent type="61" schemaName="pg_/img/controls/smile.jpg" behavior="0" />
     </RootComponents >
     <MissingDependencies />
   </SolutionManifest>

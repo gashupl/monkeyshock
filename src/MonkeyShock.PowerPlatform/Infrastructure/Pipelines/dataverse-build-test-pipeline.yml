@@ -32,6 +32,11 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
+- task: CmdLine@2
+  displayName: Install TypeScript compiler
+  inputs:
+    script: 'npm install --save-dev typescript'
+
 - task: MSCRMToolInstaller@12
   displayName: Install MSCRMTools 
   inputs:

@@ -23,3 +23,4 @@ src/MonkeyShock.PowerPlatform/Tests/Dataverse/MonkeyShock.PowerPlatform.Datavers
 /src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.WebApi/bin/Debug/net6.0
 /src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.WebApi/obj
 /src/MonkeyShock.PowerPlatform/Code/Azure/MonkeyShock.Azure.WebApi/appsettings.Development.json
+/src/MonkeyShock.PowerPlatform/Code/Dataverse/MonkeyShock.PowerPlatform.Dataverse.WebResources/node_modules
